@@ -1,31 +1,34 @@
-import React from "react";
+import bikash from "../assets/bikash.png";
 
 function About() {
   return (
-    <section className="" id="about">
-      <div className="px-6">
-        <h2 className="text-3xl text-center font-bold tracking-widest font-mono text-yellow-500">
-          About Me
-        </h2>
-        <div className="my-6 flex gap-6 flex-col lg:flex-row lg:justify-center lg:items-center">
-          <div className="bg-gray-700 p-6 rounded-lg shadow-lg flex-1">
-            <h3 className="text-xl font-bold mb-1">Qualification</h3>
-            <p className="">Bachelors Degree, Central Queensland University</p>
+    <section className="bg-gray-800 py-20 text-gray-400" id="about">
+      <div className="mx-auto max-w-[992px] flex flex-col py-12 px-4 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-h-min">
+          <div className="flex flex-col gap-4 px-2">
+            <div className="px-2 flex-1 flex flex-col">
+              <h2 className="text-3xl text-center font-bold tracking-widest font-mono text-yellow-500 mb-12">
+                About Me
+              </h2>
+              <p className="text-lg">
+                A Software Developer with a Bachelors degree in Information
+                Technology, possessing a strong proficiency in the MERN stack
+                for both frontend and backend development. Keen eye for design
+                and a passion for crafting innovative web applications.
+              </p>
+              <h1 className="my-4">
+                <span className="font-bold">Qualification: </span>
+                <span>Bachelors Degree, Central Queensland University</span>
+              </h1>
+              <h1 className="">
+                <span className="font-bold">Location: </span>
+                <span>Sydney, Australia</span>
+              </h1>
+            </div>
           </div>
-          <div className="bg-gray-700 p-6 rounded-lg shadow-lg flex-1">
-            <h3 className="text-xl font-bold mb-2">Experience</h3>
-            <p className="">My experience details go here...</p>
+          <div className="flex justify-center items-center overflow-hidden">
+            <img src={bikash} alt="" className="h-[300px]" />
           </div>
-        </div>
-
-        <div className="">
-          <p className="text-lg">
-            I am a Bachelors of Information Technology graduate with a major in
-            application development at Central Queensland University. <br /> I
-            am passionate about learning new technologies and programming
-            languages. <br />I love planning different projects and enjoy the
-            coding part even more.
-          </p>
         </div>
       </div>
     </section>

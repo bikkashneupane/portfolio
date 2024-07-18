@@ -12,13 +12,13 @@ function App() {
     <div className="bg-gray-900 text-gray-200">
       <Hero />
       <Navigation />
-      <div className="mx-auto max-w-[1440px] flex flex-col gap-24 my-20">
+      <div className="flex flex-col gap-10">
         <About />
         <Skills />
         <Projects />
         <Contact />
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 }
