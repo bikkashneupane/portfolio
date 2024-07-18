@@ -4,18 +4,21 @@ const Contact = () => {
   const contact = [
     {
       icon: <FaEnvelope className="text-2xl text-white" />,
-      name: "thisisbikkash@gmail.com",
+      link: "thisisbikkash@gmail.com",
+      mail: true,
     },
     {
       icon: <FaPhoneAlt className="text-2xl text-white" />,
-      name: "0451803981",
+      phone: "0451803981",
     },
     {
       icon: <FaGithub className="text-2xl text-white" />,
+      link: "https://github.com/bikkashneupane",
       name: "/bikkashneupane",
     },
     {
       icon: <FaLinkedin className="text-2xl text-white" />,
+      link: "https://www.linkedin.com/in/bikkashneupane/",
       name: "/bikkashneupane",
     },
   ];
@@ -30,16 +33,28 @@ const Contact = () => {
             Let's get in touch! Feel free to reach out via email or phone.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-6 pb-8 p-12 rounded-lg self-center">
-            {contact.map(({ icon, name }, index) => (
-              <a
-                key={index}
-                href="mailto:your.email@example.com"
-                className="text-lg text-gray-400 hover:underline flex lg:flex-col items-center gap-4 md:gap-2"
-              >
-                {icon}
-                <span>{name}</span>
-              </a>
-            ))}
+            {contact.map(({ icon, link, phone, mail, name }, index) =>
+              !phone ? (
+                <a
+                  key={index}
+                  href={mail ? `mailto:${link}` : link}
+                  target="_blank"
+                  className="text-lg text-gray-400 hover:underline flex lg:flex-col items-center gap-4 md:gap-2"
+                >
+                  {icon}
+                  <span>{name ?? link}</span>
+                </a>
+              ) : (
+                <a
+                  key={index}
+                  href={`tel:${phone}`}
+                  className="text-lg text-gray-400 hover:underline flex lg:flex-col items-center gap-4 md:gap-2"
+                >
+                  {icon}
+                  <span>{phone}</span>
+                </a>
+              )
+            )}
           </div>
         </div>
       </div>
