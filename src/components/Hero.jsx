@@ -2,8 +2,6 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import TextAnimation from "./TextAnimation";
 
 const heroImg = "https://wallpapercave.com/wp/wp7890200.jpg";
-// const heroImg2 = "https://wallpapercave.com/wp/wp5620974.jpg";
-// const heroImg3 = "https://wallpapercave.com/wp/wp12825880.jpg";
 
 const Hero = () => {
   return (
@@ -15,15 +13,26 @@ const Hero = () => {
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         backgroundSize: "cover",
-        zIndex: 0, // Ensure the hero section content is below the navigation
+        zIndex: 0,
       }}
     >
       <div className="flex flex-col gap-1 sm:gap-2 md:gap-4 min-h-screen justify-center items-center md:w-1/2">
         <h1 className="text-2xl md:text-3xl tracking-wider font-bold mb-4">
           Hi, I am Bikash Neupane
         </h1>
+
         <TextAnimation />
-        <div className="flex space-x-4 mt-4">
+
+        <a
+          href="/assets/Bikash-Resume.pdf"
+          download="bikash-neupane-resume.pdf"
+        >
+          <button className="px-10 py-4 text-gray-100 bg-teal-600 rounded-lg shadow-lg font-semibold">
+            Download CV
+          </button>
+        </a>
+
+        <div className="flex space-x-4 mt-4 items-center">
           <a
             href="https://github.com/bikkashneupane"
             target="_blank"
