@@ -19,7 +19,7 @@ function Projects() {
         "joi",
         "bcrypt",
       ],
-      link: "https://library-management-puce.vercel.app/",
+      link: "https://library-management-mern.vercel.app/",
     },
     {
       name: "Not To Do List",
