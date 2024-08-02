@@ -1,8 +1,10 @@
 import library from "../assets/library.png";
 import ntdl from "../assets/ntdl.png";
 import movie from "../assets/movie.png";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
-function Projects() {
+const Projects = () => {
   const projects = [
     {
       name: "Library Management System",
@@ -40,7 +42,7 @@ function Projects() {
   ];
 
   return (
-    <section className="py-10 bg-gray-800" id="projects">
+    <div className="py-10 bg-gray-800" id="projects">
       <div className="mx-auto max-w-[1440px] flex flex-col py-12 px-4">
         <h2 className="text-3xl text-center font-bold tracking-widest font-mono text-yellow-500 mb-5">
           My Projects
@@ -56,21 +58,38 @@ function Projects() {
         </h3>
 
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects?.map(({ name, image, description, tech, link }, index) => {
+          {projects.map(({ name, image, description, tech, link }, index) => {
+            const projectRef = useRef(null);
+            const isInView = useInView(projectRef, { once: false });
+
             return (
-              <div key={index} className="p-6 rounded-lg shadow-lg">
+              <motion.div
+                key={index}
+                ref={projectRef}
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{
+                  opacity: isInView ? 1 : 0,
+                  scale: isInView ? 1 : 0,
+                }}
+                transition={{
+                  duration: 1,
+                  type: "tween",
+                  ease: "easeInOut",
+                }}
+                className="p-6 rounded-lg shadow-lg"
+              >
                 <h3 className="mb-2 text-xl md:text-2xl font-bold text-center text-gray-300">
                   {name}
                 </h3>
-                <a href={link} target="_blank" alt="">
+                <a href={link} target="_blank" rel="noopener noreferrer">
                   <img
                     src={image}
-                    alt="Library Management System"
+                    alt={name}
                     className="rounded-lg shadow-lg h-[450px] w-full"
                   />
                 </a>
 
-                <p className="mt-4">{description}</p>
+                <p className="mt-4 text-gray-300">{description}</p>
                 <div className="mt-4 flex gap-2 flex-wrap">
                   {tech.map((item, index) => (
                     <span
@@ -81,13 +100,13 @@ function Projects() {
                     </span>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>
       </div>
-    </section>
+    </div>
   );
-}
+};
 
 export default Projects;

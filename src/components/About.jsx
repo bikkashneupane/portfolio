@@ -1,10 +1,10 @@
 import bikash from "../assets/bikash.png";
 
-function About() {
+const About = () => {
   return (
     <section className="bg-gray-800 py-20 text-gray-400" id="about">
       <div className="mx-auto max-w-[992px] flex flex-col py-12 px-4 ">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-h-min">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-h-min   md:px-20">
           <div className="flex flex-col gap-4 px-2">
             <div className="px-2 flex-1 flex flex-col">
               <h2 className="text-3xl text-center font-bold tracking-widest font-mono text-yellow-500 mb-12">
@@ -33,6 +33,6 @@ function About() {
       </div>
     </section>
   );
-}
+};
 
 export default About;

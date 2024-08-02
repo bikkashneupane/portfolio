@@ -16,83 +16,112 @@ import {
   SiRedux,
   SiStripe,
 } from "react-icons/si";
+import { motion } from "framer-motion";
 
 const skills = [
   {
-    icon: <FaHtml5 className="text-orange-500 w-6 h-6 md:w-12 md:h-12" />,
+    icon: <FaHtml5 className="text-orange-500 w-6 h-6" />,
     name: "HTML5",
   },
   {
-    icon: <FaCss3Alt className="text-blue-500 w-6 h-6 md:w-12 md:h-12" />,
+    icon: <FaCss3Alt className="text-blue-500 w-6 h-6" />,
     name: "CSS3",
   },
   {
-    icon: <FaJs className="text-yellow-500 w-6 h-6 md:w-12 md:h-12" />,
+    icon: <FaJs className="text-yellow-500 w-6 h-6" />,
     name: "JavaScript",
   },
   {
-    icon: <FaReact className="text-blue-400 w-6 h-6 md:w-12 md:h-12" />,
+    icon: <FaReact className="text-blue-400 w-6 h-6" />,
     name: "React",
   },
   {
-    icon: <FaNodeJs className="text-green-500 w-6 h-6 md:w-12 md:h-12" />,
+    icon: <FaNodeJs className="text-green-500 w-6 h-6" />,
     name: "Node.js",
   },
   {
-    icon: <SiMongodb className="text-green-400 w-6 h-6 md:w-12 md:h-12" />,
+    icon: <SiMongodb className="text-green-400 w-6 h-6" />,
     name: "MongoDB",
   },
   {
-    icon: <SiExpress className="text-gray-400 w-6 h-6 md:w-12 md:h-12" />,
+    icon: <SiExpress className="text-gray-400 w-6 h-6" />,
     name: "Express",
   },
   {
-    icon: <SiTailwindcss className="text-cyan-500 w-6 h-6 md:w-12 md:h-12" />,
+    icon: <SiTailwindcss className="text-cyan-500 w-6 h-6" />,
     name: "Tailwind CSS",
   },
   {
-    icon: <SiBootstrap className="text-purple-500 w-6 h-6 md:w-12 md:h-12" />,
+    icon: <SiBootstrap className="text-purple-500 w-6 h-6" />,
     name: "Bootstrap",
   },
   {
-    icon: <SiRedux className="text-purple-400 w-6 h-6 md:w-12 md:h-12" />,
+    icon: <SiRedux className="text-purple-400 w-6 h-6" />,
     name: "Redux",
   },
   {
-    icon: <SiStripe className="text-blue-600 w-6 h-6 md:w-12 md:h-12" />,
+    icon: <SiStripe className="text-blue-600 w-6 h-6" />,
     name: "Stripe",
   },
   {
-    icon: <FaGit className="text-red-500 w-6 h-6 md:w-12 md:h-12" />,
+    icon: <FaGit className="text-red-500 w-6 h-6" />,
     name: "Git",
   },
-  { icon: <FaGithub className="w-6 h-6 md:w-12 md:h-12" />, name: "GitHub" },
+  { icon: <FaGithub className="w-6 h-6" />, name: "GitHub" },
 ];
 
-function Skills() {
+const Skills = () => {
+  const duplicatedSkills = [...skills, ...skills]; // Duplicating skills to ensure continuous scrolling
+
   return (
-    <section className="p-4 py-10" id="skills">
-      <div className="mx-auto max-w-[1440px] flex flex-col my-8">
-        <h2 className="text-3xl text-center font-bold tracking-widest font-mono text-yellow-500 mb-6">
-          My Skills
+    <section className="px-4 lg:px-20 py-10" id="skills">
+      <div className="mx-auto max-w-[1440px] flex flex-col my-8 overflow-hidden">
+        <h2 className="text-3xl text-center font-bold tracking-widest font-mono text-yellow-500 mb-10">
+          MY SKILLS
         </h2>
 
-        <div className="flex flex-wrap gap-x-2 gap-y-6 md:gap-16 p-4 md:justify-center md:items-center">
-          {skills.map((skill, index) => (
-            <div key={index} className="flex flex-col gap-2 items-center">
-              <div className="">
-                <span className="">{skill.icon}</span>
+        <div className="flex flex-col gap-4">
+          {/* First Row - Moving Right to Left */}
+          <motion.div
+            className="flex gap-12"
+            animate={{ x: [-1000, 0] }} // Adjust x values based on your content width
+            transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
+          >
+            {duplicatedSkills.map((skill, index) => (
+              <div key={index} className="flex flex-col gap-2 items-center">
+                <div>
+                  <span>{skill.icon}</span>
+                </div>
+                <span className="text-gray-400 font-semibold text-xs lg:text-base">
+                  {skill.name}
+                </span>
               </div>
-              <span className="text-gray-400 font-semibold text-xs md:text-base">
-                {skill.name}
-              </span>
-            </div>
-          ))}
+            ))}
+          </motion.div>
+
+          {/* Second Row - Moving Left to Right */}
+          <motion.div
+            className="flex gap-12"
+            animate={{ x: [0, -1000] }} // Adjust x values based on your content width
+            transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
+          >
+            {duplicatedSkills.map((skill, index) => (
+              <div key={index} className="flex flex-col gap-2 items-center">
+                <div>
+                  <span>{skill.icon}</span>
+                </div>
+                <span className="text-gray-400 font-semibold text-xs lg:text-base">
+                  {skill.name}
+                </span>
+              </div>
+            ))}
+          </motion.div>
         </div>
+
         <hr />
       </div>
     </section>
   );
-}
+};
 
 export default Skills;
