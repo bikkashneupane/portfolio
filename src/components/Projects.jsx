@@ -1,11 +1,50 @@
 import library from "../assets/library.png";
 import ntdl from "../assets/ntdl.png";
 import movie from "../assets/movie.png";
+import vikiasmy_watch_1 from "../assets/vikiasmy_watches/Vikiasmy_watches_1.png";
+import vikiasmy_watch_2 from "../assets/vikiasmy_watches/Vikiasmy_watches_1.png";
+import vikiasmy_watch_3 from "../assets/vikiasmy_watches/Vikiasmy_watches_1.png";
+import vikiasmy_watch_4 from "../assets/vikiasmy_watches/Vikiasmy_watches_1.png";
+import vikiasmy_watch_5 from "../assets/vikiasmy_watches/Vikiasmy_watches_1.png";
+import vikiasmy_watch_6 from "../assets/vikiasmy_watches/Vikiasmy_watches_1.png";
+import vikiasmy_watch_7 from "../assets/vikiasmy_watches/Vikiasmy_watches_1.png";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const Projects = () => {
   const projects = [
+    {
+      name: "E-commerce Website (Vikiasmy's watches)",
+      image: vikiasmy_watch_1,
+      images: [
+        vikiasmy_watch_1,
+        vikiasmy_watch_2,
+        vikiasmy_watch_3,
+        vikiasmy_watch_4,
+        vikiasmy_watch_5,
+        vikiasmy_watch_6,
+        vikiasmy_watch_7,
+      ],
+      description:
+        "Full Stack E-Commerce Project for watch store. The conntent are dynamically managed by an admin CMS.",
+      tech: [
+        "React",
+        "Node",
+        "Express",
+        "Mongo DB",
+        "Tailwind",
+        "JWT",
+        "joi",
+        "bcrypt",
+        "redux",
+        "git",
+        "github",
+        "Stripe",
+        "Images uploaded in cloudinary",
+        "Deployed in vercel",
+      ],
+      link: "https://vikiasmy-watches.vercel.app/",
+    },
     {
       name: "Library Management System",
       image: library,
@@ -57,7 +96,7 @@ const Projects = () => {
           be patient!
         </h3>
 
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="relative mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map(({ name, image, description, tech, link }, index) => {
             const projectRef = useRef(null);
             const isInView = useInView(projectRef, { once: false });
@@ -81,7 +120,8 @@ const Projects = () => {
                 <h3 className="mb-2 text-xl md:text-2xl font-bold text-center text-gray-300">
                   {name}
                 </h3>
-                <a href={link} target="_blank" rel="noopener noreferrer">
+
+                <a href={link} target="_blank">
                   <img
                     src={image}
                     alt={name}
