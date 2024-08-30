@@ -76,8 +76,8 @@ const Skills = () => {
   return (
     <section className="px-4 lg:px-20 py-10" id="skills">
       <div className="mx-auto max-w-[1440px] flex flex-col my-8 overflow-hidden">
-        <h2 className="text-3xl text-center font-bold tracking-widest font-mono text-yellow-500 mb-10">
-          MY SKILLS
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-yellow-500 mb-20 tracking-wider font-mono">
+          My Skills
         </h2>
 
         <div className="flex flex-col gap-4">

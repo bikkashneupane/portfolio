@@ -11,136 +11,131 @@ import vikiasmy_watch_7 from "../assets/vikiasmy_watches/Vikiasmy_watches_1.png"
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-const Projects = () => {
-  const projects = [
-    {
-      name: "E-commerce Website (Vikiasmy's watches)",
-      image: vikiasmy_watch_1,
-      images: [
-        vikiasmy_watch_1,
-        vikiasmy_watch_2,
-        vikiasmy_watch_3,
-        vikiasmy_watch_4,
-        vikiasmy_watch_5,
-        vikiasmy_watch_6,
-        vikiasmy_watch_7,
-      ],
-      description:
-        "Full Stack E-Commerce Project for watch store. The conntent are dynamically managed by an admin CMS.",
-      tech: [
-        "React",
-        "Node",
-        "Express",
-        "Mongo DB",
-        "Tailwind",
-        "JWT",
-        "joi",
-        "bcrypt",
-        "redux",
-        "git",
-        "github",
-        "Stripe",
-        "Images uploaded in cloudinary",
-        "Deployed in vercel",
-      ],
-      link: "https://vikiasmy-watches.vercel.app/",
-    },
-    {
-      name: "Library Management System",
-      image: library,
-      description:
-        "Full Stack Project to allow user to burrow and return books, and leave reviews as well.",
-      tech: [
-        "React",
-        "Node",
-        "Express",
-        "Mongo DB",
-        "Bootstrap",
-        "JWT",
-        "joi",
-        "bcrypt",
-      ],
-      link: "https://library-management-mern.vercel.app/",
-    },
-    {
-      name: "Not To Do List",
-      image: ntdl,
-      description:
-        "Track and manage your weekly tasks, visualize how many hours you could have better utilised.",
-      tech: ["React", "Node", "Express", "Mongo DB", "Bootstrap"],
-      link: "https://not-to-do-list-frontend-react-qlsp.vercel.app/",
-    },
-    {
-      name: "Movie Wish List",
-      image: movie,
-      description:
-        "A simple fun project, fetch real world api for movie collection, Search your movie, add to your custom category, action/ drama.",
-      tech: ["React", "Bootstrap", "axios"],
-      link: "https://movie-list-react-fawn.vercel.app/",
-    },
-  ];
+const projects = [
+  {
+    name: "Vikiasmy's Watch Haven",
+    image: vikiasmy_watch_1,
 
+    description:
+      "A full-stack e-commerce platform specializing in luxury watches. Features a dynamic content management system for seamless product updates and management. Experience secure payments, user-friendly design, and high-quality images, all deployed to the cloud.",
+    tech: [
+      "React",
+      "Node",
+      "Express",
+      "Mongo DB",
+      "Tailwind",
+      "JWT",
+      "joi",
+      "bcrypt",
+      "redux",
+      "git",
+      "github",
+      "Stripe",
+      "Images uploaded in cloudinary",
+      "Deployed in vercel",
+    ],
+    link: "https://vikiasmy-watches.vercel.app",
+  },
+  {
+    name: "Digital Library Portal",
+    image: library,
+    description:
+      "A comprehensive library management system that allows users to borrow and return books, track borrowing history, and leave reviews. Built with a focus on accessibility and user experience, this platform simplifies library management for both users and administrators.",
+    tech: [
+      "React",
+      "Node",
+      "Express",
+      "Mongo DB",
+      "Bootstrap",
+      "JWT",
+      "joi",
+      "bcrypt",
+    ],
+    link: "https://library-management-mern.vercel.app",
+  },
+  {
+    name: "Not-To-Do List App",
+    image: ntdl,
+    description:
+      "A productivity app designed to help users track unproductive habits. Visualize the time spent on tasks you shouldn't be doing and reallocate your hours towards more productive activities. Simple, intuitive, and effective task management.",
+    tech: ["React", "Node", "Express", "Mongo DB", "Bootstrap"],
+    link: "https://not-to-do-list-frontend-react-qlsp.vercel.app",
+  },
+  {
+    name: "Movie Wishlist Organizer",
+    image: movie,
+    description:
+      "An engaging web app that lets users search, categorize, and organize their favorite movies using real-world API data. Create custom movie categories like action, drama, and more. Ideal for movie enthusiasts looking to manage their watchlist.",
+    tech: ["React", "Bootstrap", "axios"],
+    link: "https://movie-list-react-fawn.vercel.app",
+  },
+];
+
+// Custom hook to handle the visibility of project items
+const useProjectInView = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false });
+  return { ref, isInView };
+};
+
+const Projects = () => {
   return (
     <div className="py-10 bg-gray-800" id="projects">
       <div className="mx-auto max-w-[1440px] flex flex-col py-12 px-4">
-        <h2 className="text-3xl text-center font-bold tracking-widest font-mono text-yellow-500 mb-5">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-yellow-500 mb-1 tracking-wider font-mono">
           My Projects
         </h2>
 
-        <h3 className="md:text-center font-mono text-teal-600">
-          <span className="text-red-500 font-semibold tracking-widest">
-            Disclaimer
-          </span>
-          : All these projects are deployed using free versions of vercel, if
-          you visit them, it might take some seconds for initial render. Please
-          be patient!
-        </h3>
-
-        <div className="relative mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="relative mt-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
           {projects.map(({ name, image, description, tech, link }, index) => {
-            const projectRef = useRef(null);
-            const isInView = useInView(projectRef, { once: false });
+            const { ref, isInView } = useProjectInView();
 
             return (
-              <motion.div
-                key={index}
-                ref={projectRef}
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{
-                  opacity: isInView ? 1 : 0,
-                  scale: isInView ? 1 : 0,
-                }}
-                transition={{
-                  duration: 1,
-                  type: "tween",
-                  ease: "easeInOut",
-                }}
-                className="p-6 rounded-lg shadow-lg"
-              >
-                <h3 className="mb-2 text-xl md:text-2xl font-bold text-center text-gray-300">
+              <div className="" key={index}>
+                <h3 className="mb-6 text-xl font-semibold text-center text-gray-300">
                   {name}
                 </h3>
+                <motion.div
+                  ref={ref}
+                  initial={{ opacity: 0, scale: 0 }}
+                  animate={{
+                    opacity: isInView ? 1 : 0,
+                    scale: isInView ? 1 : 0,
+                  }}
+                  transition={{
+                    duration: 1,
+                    type: "tween",
+                    ease: "easeInOut",
+                  }}
+                  className="pb-6 rounded-lg border border-gray-600 shadow-lg shadow-gray-600"
+                >
+                  <a
+                    href={link}
+                    target="_blank"
+                    aria-label={`View ${name} project`}
+                  >
+                    <img
+                      src={image}
+                      alt={name}
+                      className="rounded-t-lg shadow-lg h-[450px] w-full"
+                    />
+                  </a>
 
-                <a href={link} target="_blank">
-                  <img
-                    src={image}
-                    alt={name}
-                    className="rounded-lg shadow-lg h-[450px] w-full"
-                  />
-                </a>
-
-                <p className="mt-4 text-gray-300">{description}</p>
-                <div className="mt-4 flex gap-2 flex-wrap">
-                  {tech.map((item, index) => (
-                    <span
-                      key={index}
-                      className="px-2 py-1 bg-gray-600 text-white text-sm shadow-lg"
-                    >
-                      {item}
-                    </span>
-                  ))}
-                </div>
-              </motion.div>
+                  <div className="px-6 md:h-[250px] xl:h-[300px]">
+                    <p className="mt-4 text-gray-300">{description}</p>
+                    <div className="mt-4 flex gap-2 flex-wrap">
+                      {tech.map((item, index) => (
+                        <span
+                          key={index}
+                          className="px-2 py-1 bg-gray-600 text-white text-sm shadow-lg"
+                        >
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
             );
           })}
         </div>
