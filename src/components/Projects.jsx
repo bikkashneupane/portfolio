@@ -1,13 +1,8 @@
 import library from "../assets/library.png";
 import ntdl from "../assets/ntdl.png";
 import movie from "../assets/movie.png";
+import netflixgpt from "../assets/netflix_gpt.png";
 import vikiasmy_watch_1 from "../assets/vikiasmy_watches/Vikiasmy_watches_1.png";
-import vikiasmy_watch_2 from "../assets/vikiasmy_watches/Vikiasmy_watches_1.png";
-import vikiasmy_watch_3 from "../assets/vikiasmy_watches/Vikiasmy_watches_1.png";
-import vikiasmy_watch_4 from "../assets/vikiasmy_watches/Vikiasmy_watches_1.png";
-import vikiasmy_watch_5 from "../assets/vikiasmy_watches/Vikiasmy_watches_1.png";
-import vikiasmy_watch_6 from "../assets/vikiasmy_watches/Vikiasmy_watches_1.png";
-import vikiasmy_watch_7 from "../assets/vikiasmy_watches/Vikiasmy_watches_1.png";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -52,6 +47,14 @@ const projects = [
       "bcrypt",
     ],
     link: "https://library-management-mern.vercel.app",
+  },
+  {
+    name: "Netflix GPT (Ongoing...)",
+    image: netflixgpt,
+    description:
+      "A cutting-edge Netflix clone integrated with Chat-GPT to enhance your search experience. This project aims to provide an intuitive interface for browsing and discovering movies and TV shows. Utilize advanced AI-driven search capabilities to find content effortlessly. Currently under development, this project showcases the integration of real-time AI assistance with popular streaming services.",
+    tech: ["React", "Tailwind", "TMDB API", "Firebase"],
+    link: "https://netflix-gpt-d1382.web.app",
   },
   {
     name: "Not-To-Do List App",
