@@ -38,10 +38,10 @@ const Hero = () => {
           className="flex flex-col items-center gap-2"
         >
           <a
-            href="/assets/Bikash-Resume.pdf"
+            href="/assets/Bikash-Neupane-Resume.pdf"
             download="bikash-neupane-resume.pdf"
           >
-            <button className="mt-10 px-10 py-4 text-gray-100 bg-teal-600 rounded-lg shadow-lg font-semibold">
+            <button className="mt-10 px-10 py-4 text-gray-100 bg-teal-600 rounded-lg shadow-lg font-semibold hover:bg-teal-500">
               Download CV
             </button>
           </a>
@@ -53,7 +53,7 @@ const Hero = () => {
               rel="noopener noreferrer"
               className="text-white hover:text-gray-300"
             >
-              <FaGithub className="text-2xl md:text-3xl lg:text-4xl" />
+              <FaGithub className="text-2xl md:text-3xl lg:text-4xl hover:text-yellow-500" />
             </a>
             <a
               href="https://www.linkedin.com/in/bikkashneupane/"
@@ -61,7 +61,7 @@ const Hero = () => {
               rel="noopener noreferrer"
               className="text-white hover:text-gray-300"
             >
-              <FaLinkedin className="text-2xl md:text-3xl lg:text-4xl" />
+              <FaLinkedin className="text-2xl md:text-3xl lg:text-4xl hover:text-yellow-500" />
             </a>
           </div>
         </motion.div>
