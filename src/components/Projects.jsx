@@ -143,17 +143,17 @@ const Projects = () => {
                     <img
                       src={image}
                       alt={name}
-                      className="rounded-t-lg shadow-lg h-[450px] w-full"
+                      className="rounded-t-lg shadow-lg h-[350px] w-full"
                     />
                   </a>
 
-                  <div className="px-6 md:h-[250px] xl:h-[300px]">
-                    <p className="mt-4 text-gray-300">{description}</p>
+                  <div className="px-6 md:h-[350px] lg:h-[270px] text-sm pt-2">
+                    <p className="mt-4 text-gray-400">{description}</p>
                     <div className="mt-4 flex gap-2 flex-wrap">
                       {tech.map((item, index) => (
                         <span
                           key={index}
-                          className="px-2 py-1 bg-gray-600 text-white text-sm shadow-lg"
+                          className="px-2 py-1 bg-teal-800 text-white shadow-lg rounded"
                         >
                           {item}
                         </span>
