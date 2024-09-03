@@ -2,14 +2,15 @@ import library from "../assets/library.png";
 import ntdl from "../assets/ntdl.png";
 import movie from "../assets/movie.png";
 import netflixgpt from "../assets/netflix_gpt.png";
-import vikiasmy_watch_1 from "../assets/vikiasmy_watches/Vikiasmy_watches_1.png";
+import vikiasmy_watch from "../assets/Vikiasmy_watches.png";
+import vikiamy_admin_cms from "../assets/Vikiasmy_Admin_CMS.png";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const projects = [
   {
     name: "Vikiasmy's Watch Haven",
-    image: vikiasmy_watch_1,
+    image: vikiasmy_watch,
 
     description:
       "A full-stack e-commerce platform specializing in luxury watches. Features a dynamic content management system for seamless product updates and management. Experience secure payments, user-friendly design, and high-quality images, all deployed to the cloud.",
@@ -20,16 +21,46 @@ const projects = [
       "Mongo DB",
       "Tailwind",
       "JWT",
-      "joi",
-      "bcrypt",
-      "redux",
-      "git",
-      "github",
+      "Joi",
+      "Bcrypt",
+      "Redux",
+      "Git",
+      "Github",
       "Stripe",
       "Images uploaded in cloudinary",
       "Deployed in vercel",
     ],
     link: "https://vikiasmy-watches.vercel.app",
+  },
+  {
+    name: "Vikiamy's Admin CMS",
+    image: vikiamy_admin_cms, // replace with the actual image variable
+    description:
+      "An advanced Admin CMS for Vikiamy’s, designed to streamline the management of products and user data. Features a user-friendly interface for efficient content management, with secure access controls and robust backend functionalities.",
+    tech: [
+      "React",
+      "Node",
+      "Express",
+      "MongoDB",
+      "Tailwind",
+      "JWT",
+      "Joi",
+      "Bcrypt",
+      "Redux",
+      "Git",
+      "GitHub",
+      "Frontend On Vercel",
+      "Backend On Render",
+    ],
+    link: "https://vikiasmy-watches-admin-cms.vercel.app",
+  },
+  {
+    name: "Netflix GPT (Ongoing...)",
+    image: netflixgpt,
+    description:
+      "A cutting-edge Netflix clone integrated with Chat-GPT to enhance your search experience. This project aims to provide an intuitive interface for browsing and discovering movies and TV shows. Utilize advanced AI-driven search capabilities to find content effortlessly. Currently under development, this project showcases the integration of real-time AI assistance with popular streaming services.",
+    tech: ["React", "Tailwind", "TMDB API", "Firebase"],
+    link: "https://netflix-gpt-d1382.web.app",
   },
   {
     name: "Digital Library Portal",
@@ -43,18 +74,10 @@ const projects = [
       "Mongo DB",
       "Bootstrap",
       "JWT",
-      "joi",
-      "bcrypt",
+      "Joi",
+      "Bcrypt",
     ],
     link: "https://library-management-mern.vercel.app",
-  },
-  {
-    name: "Netflix GPT (Ongoing...)",
-    image: netflixgpt,
-    description:
-      "A cutting-edge Netflix clone integrated with Chat-GPT to enhance your search experience. This project aims to provide an intuitive interface for browsing and discovering movies and TV shows. Utilize advanced AI-driven search capabilities to find content effortlessly. Currently under development, this project showcases the integration of real-time AI assistance with popular streaming services.",
-    tech: ["React", "Tailwind", "TMDB API", "Firebase"],
-    link: "https://netflix-gpt-d1382.web.app",
   },
   {
     name: "Not-To-Do List App",
@@ -69,7 +92,7 @@ const projects = [
     image: movie,
     description:
       "An engaging web app that lets users search, categorize, and organize their favorite movies using real-world API data. Create custom movie categories like action, drama, and more. Ideal for movie enthusiasts looking to manage their watchlist.",
-    tech: ["React", "Bootstrap", "axios"],
+    tech: ["React", "Bootstrap", "Axios"],
     link: "https://movie-list-react-fawn.vercel.app",
   },
 ];
