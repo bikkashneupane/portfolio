@@ -153,7 +153,7 @@ const Projects = () => {
                       {tech.map((item, index) => (
                         <span
                           key={index}
-                          className="px-2 py-1 bg-teal-800 text-white shadow-lg rounded"
+                          className="px-2 py-1 bg-gray-700 text-gray-300 shadow-lg rounded"
                         >
                           {item}
                         </span>
