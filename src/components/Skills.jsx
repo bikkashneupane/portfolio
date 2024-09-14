@@ -74,13 +74,13 @@ const Skills = () => {
   const duplicatedSkills = [...skills, ...skills]; // Duplicating skills to ensure continuous scrolling
 
   return (
-    <section className="px-4 lg:px-20 py-10" id="skills">
-      <div className="mx-auto max-w-[1440px] flex flex-col my-8 overflow-hidden">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-yellow-500 mb-20 tracking-wider font-mono">
+    <section className="px-5 lg:px-20 py-6" id="skills">
+      <div className="mx-auto max-w-[1440px] flex flex-col overflow-hidden">
+        <h2 className="text-xl md:text-3xl font-bold text-center text-yellow-500 mb-16 tracking-wider font-mono">
           My Skills
         </h2>
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-10">
           {/* First Row - Moving Right to Left */}
           <motion.div
             className="flex gap-12"
@@ -117,8 +117,6 @@ const Skills = () => {
             ))}
           </motion.div>
         </div>
-
-        <hr />
       </div>
     </section>
   );

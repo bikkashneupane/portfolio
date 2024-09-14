@@ -30,7 +30,7 @@ const projects = [
       "Images uploaded in cloudinary",
       "Deployed in vercel",
     ],
-    link: "https://www.vikiasmy-watches.bikashneupane.com",
+    link: "https://vikiasmy.bikashneupane.com",
   },
   {
     name: "Vikiamy's Admin CMS",
@@ -107,7 +107,7 @@ const useProjectInView = () => {
 const Projects = () => {
   return (
     <div className="py-10 bg-gray-800" id="projects">
-      <div className="mx-auto max-w-[1440px] flex flex-col py-12 px-4">
+      <div className="mx-auto max-w-[1440px] flex flex-col my-12 px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-yellow-500 mb-1 tracking-wider font-mono">
           My Projects
         </h2>
@@ -129,7 +129,7 @@ const Projects = () => {
                     scale: isInView ? 1 : 0,
                   }}
                   transition={{
-                    duration: 1,
+                    duration: 0.8,
                     type: "tween",
                     ease: "easeInOut",
                   }}

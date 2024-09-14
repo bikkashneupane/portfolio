@@ -2,11 +2,11 @@ import bikash from "../assets/bikash.png";
 
 const About = () => {
   return (
-    <section className="bg-gray-800 py-20 text-gray-400" id="about">
-      <div className="mx-auto max-w-6xl flex flex-col py-12 px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:px-20">
-          <div className="flex flex-col gap-8 px-2">
-            <h2 className="text-3xl md:text-4xl font-bold text-center text-yellow-500 mb-1 tracking-wider font-mono">
+    <section className="py-16 bg-gray-800 text-gray-400" id="about">
+      <div className="mx-auto max-w-7xl flex flex-col px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 px-4">
+          <div className="lg:col-span-2 space-y-4 px-2">
+            <h2 className="text-xl md:text-3xl font-bold text-center text-yellow-500 mb-1 tracking-wider font-mono">
               About Me
             </h2>
             <p className="text-base md:text-lg leading-relaxed text-justify">
@@ -21,7 +21,7 @@ const About = () => {
               problems and am always eager to learn new technologies and improve
               my skills.
             </p>
-            <div className="space-y-4">
+            <div className="space-y-2">
               <h3 className="text-xl font-semibold text-yellow-500">
                 Qualification
               </h3>
@@ -35,11 +35,7 @@ const About = () => {
             </div>
           </div>
           <div className="flex justify-center items-center overflow-hidden">
-            <img
-              src={bikash}
-              alt="Bikash"
-              className="h-[300px] rounded-full shadow-lg"
-            />
+            <img src={bikash} alt="Bikash" className="h-[450px]" />
           </div>
         </div>
       </div>
