@@ -30,7 +30,7 @@ const projects = [
       "Images uploaded in cloudinary",
       "Deployed in vercel",
     ],
-    link: "https://vikiasmy.bikashneupane.com",
+    link: "https://vikiasmy-watches.bikashneupane.com",
   },
   {
     name: "Vikiamy's Admin CMS",
@@ -52,7 +52,7 @@ const projects = [
       "Frontend On Vercel",
       "Backend On Render",
     ],
-    link: "https://www.vikiasmy-admin.bikashneupane.com/",
+    link: "https://vikiasmy-admin.bikashneupane.com/",
   },
   {
     name: "Netflix GPT (Ongoing...)",
