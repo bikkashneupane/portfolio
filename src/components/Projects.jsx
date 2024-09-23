@@ -30,7 +30,7 @@ const projects = [
       "Images uploaded in cloudinary",
       "Deployed in vercel",
     ],
-    link: "https://vikiasmy-watches.bikashneupane.com",
+    link: "https://vikiasmy.bikashneupane.com",
   },
   {
     name: "Vikiamy's Admin CMS",
