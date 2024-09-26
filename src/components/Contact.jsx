@@ -23,11 +23,11 @@ const Contact = () => {
     },
   ];
   return (
-    <section id="contact" className="py-10">
+    <section id="contact" className="py-20">
       <div className="mx-auto max-w-[1440px] flex flex-col px-4">
         <div className="text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-yellow-500 mb-1 tracking-wider font-mono">
-            Contact Me
+          <h2 className="text-xl md:text-3xl font-bold text-center text-teal-500 mb-16 tracking-wider">
+            CONTACT ME
           </h2>
           <p className="text-gray-400 mt-4 mb-2">
             Let's get in touch! Feel free to reach out via email or phone.

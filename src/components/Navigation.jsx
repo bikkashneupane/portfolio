@@ -4,11 +4,11 @@ import { GiGiftOfKnowledge } from "react-icons/gi";
 import { motion } from "framer-motion";
 
 const navItems = [
-  { icon: <FaHome />, name: "Home", to: "#hero" },
-  { icon: <FaUser />, name: "About", to: "#about" },
-  { icon: <FaProjectDiagram />, name: "Projects", to: "#projects" },
-  { icon: <GiGiftOfKnowledge />, name: "Skills", to: "#skills" },
-  { icon: <FaEnvelope />, name: "Contact", to: "#contact" },
+  { icon: <FaHome />, name: "HOME", to: "#hero" },
+  { icon: <FaUser />, name: "ABOUT", to: "#about" },
+  { icon: <FaProjectDiagram />, name: "PROJECTS", to: "#projects" },
+  { icon: <GiGiftOfKnowledge />, name: "SKILLS", to: "#skills" },
+  { icon: <FaEnvelope />, name: "CONTACT", to: "#contact" },
 ];
 
 const Navigation = () => {
@@ -33,21 +33,22 @@ const Navigation = () => {
         initial={{ y: "-100%" }}
         animate={{ y: 0 }}
         transition={{ type: "tween", duration: 0.6, ease: "easeInOut" }}
-        className="fixed top-0 left-0 w-full bg-gray-950 text-gray-300 z-50"
+        className="fixed top-0 left-0 w-full bg-black border-b border-b-gray-800 text-gray-300 z-50"
       >
-        <div className="flex justify-between items-center p-4 mx-auto max-w-[1440px]">
+        <div className="flex justify-between items-center p-4 mx-auto max-w-[1440px] h-[100px]">
           <a href="#" className="font-bold text-2xl tracking-wider">
-            Bik<span className="text-yellow-600">ash</span>
+            <span className="text-white">Bik</span>
+            <span className="text-teal-600">ash</span>
           </a>
-          <div className="hidden md:flex md:justify-between md:space-x-8">
+          <div className="hidden md:flex md:justify-between md:space-x-20 font-bold">
             {navItems.map((item, index) => (
               <a
                 href={item.to}
                 key={index}
-                className="group flex items-center transform transition hover:text-yellow-500"
+                className="group flex items-center transform transition hover:text-teal-500"
                 onClick={(e) => handleClick(e, item.to)}
               >
-                <span className="flex flex-col items-center">
+                <span className="flex flex-col items-center gap-1">
                   {item.icon}
                   <span>{item.name}</span>
                 </span>
@@ -55,7 +56,7 @@ const Navigation = () => {
             ))}
           </div>
           <div
-            className="md:hidden text-yellow-500"
+            className="md:hidden text-teal-500"
             onClick={() => setMobileView(!mobileView)}
           >
             <svg
@@ -84,7 +85,7 @@ const Navigation = () => {
           className="fixed top-0 right-0 h-screen w-full bg-gray-900 shadow-lg"
         >
           <div
-            className="text-yellow-500 flex justify-end p-4"
+            className="text-teal-500 flex justify-end p-4"
             onClick={() => setMobileView(false)}
           >
             <svg
@@ -102,7 +103,7 @@ const Navigation = () => {
               <a
                 href={item.to}
                 key={index}
-                className="group flex transition hover:text-yellow-500"
+                className="group flex transition hover:text-teal-500"
                 onClick={(e) => handleClick(e, item.to)}
               >
                 {item.name}

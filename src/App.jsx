@@ -9,10 +9,10 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="bg-gray-900 text-gray-200">
+    <div>
       <Hero />
       <Navigation />
-      <div className="flex flex-col gap-10">
+      <div className="flex flex-col">
         <About />
         <Skills />
         <Projects />

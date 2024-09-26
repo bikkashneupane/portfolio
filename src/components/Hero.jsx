@@ -53,7 +53,7 @@ const Hero = () => {
               rel="noopener noreferrer"
               className="text-white hover:text-gray-300"
             >
-              <FaGithub className="text-2xl md:text-3xl lg:text-4xl hover:text-yellow-500" />
+              <FaGithub className="text-2xl md:text-3xl lg:text-4xl hover:text-teal-500" />
             </a>
             <a
               href="https://www.linkedin.com/in/bikkashneupane/"
@@ -61,7 +61,7 @@ const Hero = () => {
               rel="noopener noreferrer"
               className="text-white hover:text-gray-300"
             >
-              <FaLinkedin className="text-2xl md:text-3xl lg:text-4xl hover:text-yellow-500" />
+              <FaLinkedin className="text-2xl md:text-3xl lg:text-4xl hover:text-teal-500" />
             </a>
           </div>
         </motion.div>
