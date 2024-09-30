@@ -15,8 +15,10 @@ import {
   SiBootstrap,
   SiRedux,
   SiStripe,
+  SiTypescript,
 } from "react-icons/si";
 import { motion } from "framer-motion";
+import { RiNextjsFill } from "react-icons/ri";
 
 const skills = [
   {
@@ -32,8 +34,16 @@ const skills = [
     name: "JavaScript",
   },
   {
+    icon: <SiTypescript className="text-sky-500 w-6 h-6" />,
+    name: "TypeScript",
+  },
+  {
     icon: <FaReact className="text-blue-400 w-6 h-6" />,
     name: "React",
+  },
+  {
+    icon: <RiNextjsFill className="text-black-400 w-6 h-6" />,
+    name: "Next.js",
   },
   {
     icon: <FaNodeJs className="text-green-500 w-6 h-6" />,
@@ -73,7 +83,7 @@ const skills = [
 const Skills = () => {
   const duplicatedSkills = [...skills, ...skills]; // Duplicating skills to ensure continuous scrolling
 
-  return ( 
+  return (
     <section className="px-5 lg:px-20 py-20" id="skills">
       <div className="mx-auto max-w-[1440px] flex flex-col overflow-hidden">
         <h2 className="text-xl md:text-3xl font-bold text-center text-teal-500 mb-16 tracking-wider">

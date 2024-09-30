@@ -2,7 +2,7 @@ import bikash from "../assets/bikash.png";
 
 const About = () => {
   return (
-    <section className="py-16 bg-gray-900 text-gray-300" id="about">
+    <section className="py-16 bg-gray-950 text-gray-300" id="about">
       <div className="mx-auto max-w-7xl flex flex-col px-4">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 px-4">
           <div className="lg:col-span-2 space-y-4 px-2">
