@@ -30,6 +30,8 @@ export const projects = [
     ],
     link: "https://vikiasmy.bikashneupane.com",
     githib: "https://github.com/bikkashneupane/Store_Front_UI",
+    linkedin:
+      "https://www.linkedin.com/posts/bikkashneupane_mern-react-node-activity-7233743990376820736-82qa?utm_source=share&utm_medium=member_desktop",
   },
   {
     name: "Vikiamy's Admin CMS",
@@ -51,6 +53,8 @@ export const projects = [
     ],
     link: "https://vikiasmy-admin.bikashneupane.com/",
     github: "https://github.com/bikkashneupane/ui_admin_cms",
+    linkedin:
+      "https://www.linkedin.com/posts/bikkashneupane_mern-react-node-activity-7236701816988536835-4kKF?utm_source=share&utm_medium=member_desktop",
   },
   {
     name: "My Portfolio Website",

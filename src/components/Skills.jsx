@@ -73,7 +73,7 @@ const skills = [
 const Skills = () => {
   const duplicatedSkills = [...skills, ...skills]; // Duplicating skills to ensure continuous scrolling
 
-  return (
+  return ( 
     <section className="px-5 lg:px-20 py-20" id="skills">
       <div className="mx-auto max-w-[1440px] flex flex-col overflow-hidden">
         <h2 className="text-xl md:text-3xl font-bold text-center text-teal-500 mb-16 tracking-wider">

@@ -1,5 +1,5 @@
 import { projects } from "../constants/projects";
-import { FaGithub, FaLink } from "react-icons/fa";
+import { FaGithub, FaLink, FaLinkedin } from "react-icons/fa";
 
 const Projects = () => {
   return (
@@ -11,7 +11,10 @@ const Projects = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-12 gap-y-16">
           {projects.map(
-            ({ name, image, description, tech, link, github }, index) => {
+            (
+              { name, image, description, tech, link, github, linkedin },
+              index
+            ) => {
               return (
                 <div key={index} className="rounded-lg border border-gray-800">
                   <div className="pb-6">
@@ -37,6 +40,11 @@ const Projects = () => {
                         ))}
                       </div>
                       <div className="flex justify-center gap-4 mt-8 text-gray-400">
+                        {linkedin && (
+                          <a href={linkedin} target="_blank">
+                            <FaLinkedin className="h-6 w-6 hover:text-teal-500 cursor-pointer" />
+                          </a>
+                        )}
                         <a href={link} target="_blank">
                           <FaLink className="h-6 w-6 hover:text-teal-500 cursor-pointer" />
                         </a>
