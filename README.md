@@ -1,4 +1,4 @@
-bikashneupane.com
+https://www.bikashneupane.com
 
 # Bikash Neupane - Portfolio Website
 
