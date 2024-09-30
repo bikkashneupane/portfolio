@@ -3,25 +3,35 @@ import { FaGithub, FaLink, FaLinkedin } from "react-icons/fa";
 
 const Projects = () => {
   return (
-    <div className="py-10 bg-gray-900" id="projects">
-      <div className="mx-auto max-w-[1440px] flex flex-col px-4">
-        <h2 className="text-xl md:text-3xl font-bold text-center text-teal-500 mb-16 tracking-wider">
-          PROJECTS
-        </h2>
+    <div className=" py-10 bg-gray-900" id="projects">
+      <h2 className="text-xl md:text-3xl font-bold text-center text-teal-500 mb-16 tracking-wider">
+        PROJECTS
+      </h2>
 
+      <div className="mx-auto max-w-[1440px] flex flex-col px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-12 gap-y-16">
           {projects.map(
             (
-              { name, image, description, tech, link, github, linkedin },
+              {
+                name,
+                thumbnail,
+                description,
+                tech,
+                link,
+                github,
+                linkedin,
+                images,
+              },
               index
             ) => {
               return (
                 <div key={index} className="rounded-lg border border-gray-800">
                   <div className="pb-6">
                     <img
-                      src={image}
+                      src={thumbnail}
                       alt={name}
                       className="rounded-t-lg shadow-lg h-[250px] w-full"
+                      onClick={() => handleCurrentProject(images)}
                     />
 
                     <div className="px-5 text-sm flex flex-col gap-2 mt-5">

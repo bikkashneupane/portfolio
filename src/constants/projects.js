@@ -5,15 +5,16 @@ import movie from "../assets/movie.png";
 import pagination from "../assets/pagination.png";
 import netflixgpt from "../assets/netflix_gpt.png";
 import vikiasmy_watch from "../assets/Vikiasmy_watches.png";
+import vikiasmy_watch_2 from "../assets/vikiasmy_watches/Vikiasmy_watches_2.png";
 import vikiamy_admin_cms from "../assets/Vikiasmy_Admin_CMS.png";
 
 export const projects = [
   {
     name: "Vikiasmy's Watch Haven",
-    image: vikiasmy_watch,
-
+    thumbnail: vikiasmy_watch,
+    images: [vikiasmy_watch, vikiasmy_watch_2],
     description:
-      "A full-stack e-commerce platform specializing in luxury watches. Features a dynamic content management system for seamless product updates and management. Experience secure payments, user-friendly design, and high-quality images, all deployed to the cloud.",
+      "A full-stack e-commerce platform specializing in luxury watches. Features a dynamic content management system for seamless product updates and management. Experience secure payments, user-friendly design, and high-quality thumbnails, all deployed to the cloud.",
     tech: [
       "React",
       "Node",
@@ -35,7 +36,7 @@ export const projects = [
   },
   {
     name: "Vikiamy's Admin CMS",
-    image: vikiamy_admin_cms,
+    thumbnail: vikiamy_admin_cms,
     description:
       "An advanced Admin CMS for Vikiamy’s, designed to streamline the management of products and user data. Features a user-friendly interface for efficient content management, with secure access controls and robust backend functionalities.",
     tech: [
@@ -58,7 +59,7 @@ export const projects = [
   },
   {
     name: "My Portfolio Website",
-    image: portfolio,
+    thumbnail: portfolio,
     description:
       "A personal portfolio showcasing my skills, projects, and experience as a Full Stack Developer. Built with a clean and modern design using React and Tailwind CSS, the website highlights my journey, technical expertise, and the innovative projects I've worked on. It's designed to offer an engaging user experience, reflecting my proficiency in front-end and back-end technologies.",
     tech: ["React", "Tailwind"],
@@ -67,7 +68,7 @@ export const projects = [
   },
   {
     name: "Netflix GPT (Ongoing...)",
-    image: netflixgpt,
+    thumbnail: netflixgpt,
     description:
       "A cutting-edge Netflix clone integrated with Chat-GPT to enhance your search experience. This project aims to provide an intuitive interface for browsing and discovering movies and TV shows. Utilize advanced AI-driven search capabilities to find content effortlessly. Currently under development, this project showcases the integration of real-time AI assistance with popular streaming services.",
     tech: ["React", "Tailwind", "TMDB API", "Firebase"],
@@ -76,7 +77,7 @@ export const projects = [
   },
   {
     name: "Digital Library Portal",
-    image: library,
+    thumbnail: library,
     description:
       "A comprehensive library management system that allows users to borrow and return books, track borrowing history, and leave reviews. Built with a focus on accessibility and user experience, this platform simplifies library management for both users and administrators.",
     tech: [
@@ -95,7 +96,7 @@ export const projects = [
   },
   {
     name: "Not-To-Do List App",
-    image: ntdl,
+    thumbnail: ntdl,
     description:
       "A productivity app designed to help users track unproductive habits. Visualize the time spent on tasks you shouldn't be doing and reallocate your hours towards more productive activities. Simple, intuitive, and effective task management.",
     tech: ["React", "Node", "Express", "Mongo DB", "Bootstrap"],
@@ -103,7 +104,7 @@ export const projects = [
   },
   {
     name: "Movie Wishlist Organizer",
-    image: movie,
+    thumbnail: movie,
     description:
       "An engaging web app that lets users search, categorize, and organize their favorite movies using real-world API data. Create custom movie categories like action, drama, and more. Ideal for movie enthusiasts looking to manage their watchlist.",
     tech: ["React", "Bootstrap", "Axios"],
@@ -112,7 +113,7 @@ export const projects = [
   },
   {
     name: "Paginate Pro",
-    image: pagination,
+    thumbnail: pagination,
     description:
       "A user-friendly web application that demonstrates the fundamentals of pagination. It provides a simple and clear visual example of handling large data sets by breaking them into manageable pages using React and Tailwind CSS. Perfect for developers learning how to efficiently navigate through data-heavy content.",
     tech: ["React", "Tailwind"],
