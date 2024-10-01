@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <main
       id="hero"
-      className="relative bg-gray-800 text-white min-h-screen"
+      className="relative text-white min-h-screen"
       style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${heroImg})`,
         backgroundRepeat: "no-repeat",

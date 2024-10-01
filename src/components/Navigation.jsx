@@ -35,12 +35,12 @@ const Navigation = () => {
         transition={{ type: "tween", duration: 0.6, ease: "easeInOut" }}
         className="fixed top-0 left-0 w-full bg-black border-b border-b-gray-800 text-gray-300 z-50"
       >
-        <div className="flex justify-between items-center p-4 mx-auto max-w-[1440px] h-[100px]">
+        <div className="flex justify-between items-center p-4 mx-auto max-w-[1440px] h-[80px]">
           <a href="#" className="font-bold text-2xl tracking-wider">
             <span className="text-white">Bik</span>
             <span className="text-teal-600">ash</span>
           </a>
-          <div className="hidden md:flex md:justify-between md:space-x-20 font-bold">
+          <div className="hidden md:flex md:justify-between md:space-x-10 font-semibold">
             {navItems.map((item, index) => (
               <a
                 href={item.to}
@@ -82,10 +82,10 @@ const Navigation = () => {
           initial={{ x: "100%" }}
           animate={{ x: 0 }}
           transition={{ type: "tween", duration: 0.4, ease: "easeInOut" }}
-          className="fixed top-0 right-0 h-screen w-full bg-gray-900 shadow-lg"
+          className="fixed top-0 right-0 h-screen w-full bg-gray-900 shadow-lg z-50"
         >
           <div
-            className="text-teal-500 flex justify-end p-4"
+            className="text-teal-700 hover:text-teal-500 flex justify-end p-4"
             onClick={() => setMobileView(false)}
           >
             <svg
@@ -93,17 +93,17 @@ const Navigation = () => {
               viewBox="0 0 16 16"
               fill="currentColor"
               aria-hidden="true"
-              className="w-12 h-12 cursor-pointer"
+              className="w-12 h-12 cursor-pointer bg-gray-800 rounded-lg"
             >
               <path d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94 5.28 4.22Z"></path>
             </svg>
           </div>
-          <div className="space-y-10 h-full flex flex-col items-center text-2xl font-semibold text-gray-300 mt-16">
+          <div className="space-y-10 h-full flex flex-col items-center text-xl font-semibold text-gray-300 mt-16">
             {navItems.map((item, index) => (
               <a
                 href={item.to}
                 key={index}
-                className="group flex transition hover:text-teal-500"
+                className="group flex transition-all delay-75 hover:text-teal-500"
                 onClick={(e) => handleClick(e, item.to)}
               >
                 {item.name}

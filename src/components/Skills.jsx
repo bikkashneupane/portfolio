@@ -1,4 +1,3 @@
-import React from "react";
 import {
   FaHtml5,
   FaCss3Alt,
@@ -84,32 +83,13 @@ const Skills = () => {
   const duplicatedSkills = [...skills, ...skills]; // Duplicating skills to ensure continuous scrolling
 
   return (
-    <section className="px-5 lg:px-20 py-20" id="skills">
-      <div className="mx-auto max-w-[1440px] flex flex-col overflow-hidden">
-        <h2 className="text-xl md:text-3xl font-bold text-center text-teal-500 mb-16 tracking-wider">
+    <section className="pt-16 pb-20 border-b border-b-gray-800" id="skills">
+      <div className="mx-auto max-w-[1440px]">
+        <h2 className="text-xl md:text-2xl font-bold text-center text-yellow-500 mb-5 tracking-wider pb-5">
           MY SKILLS
         </h2>
 
-        <div className="flex flex-col gap-10">
-          {/* First Row - Moving Right to Left */}
-          <motion.div
-            className="flex gap-12"
-            animate={{ x: [-1000, 0] }} // Adjust x values based on your content width
-            transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
-          >
-            {duplicatedSkills.map((skill, index) => (
-              <div key={index} className="flex flex-col gap-2 items-center">
-                <div>
-                  <span>{skill.icon}</span>
-                </div>
-                <span className="text-gray-400 font-semibold text-xs lg:text-base">
-                  {skill.name}
-                </span>
-              </div>
-            ))}
-          </motion.div>
-
-          {/* Second Row - Moving Left to Right */}
+        <div className="flex flex-col gap-10 border-2 border-gray-500 rounded-lg items-center mx-4 py-4 lg:py-6 px-1 overflow-hidden">
           <motion.div
             className="flex gap-12"
             animate={{ x: [0, -1000] }} // Adjust x values based on your content width
