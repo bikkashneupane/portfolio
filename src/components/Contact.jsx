@@ -24,16 +24,19 @@ const contact = [
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-16 border-b border-b-gray-800">
-      <div className="mx-auto max-w-[1440px] flex flex-col px-4">
+    <section
+      id="contact"
+      className="my-16 py-10 border-y border-y-gray-800 text-sm"
+    >
+      <div className="mx-auto max-w-5xl flex flex-col">
         <div className="text-center">
-          <h2 className="text-xl md:text-2xl font-bold text-center text-yellow-500 tracking-wider">
-            CONTACT ME
+          <h2 className="text-xl md:text-2xl font-bold text-yellow-500 text-center mb-10">
+            Contact Me
           </h2>
-          <p className="text-gray-400 mt-4 mb-2">
+          <p className="text-gray-400 mt-4 mb-16">
             Lets get in touch! Feel free to reach out via email or phone.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-6 pb-8 p-12 rounded-lg self-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-6 pb-8 px-5 rounded-lg self-center">
             {contact.map(({ icon, link, phone, mail, name }, index) =>
               !phone ? (
                 <a

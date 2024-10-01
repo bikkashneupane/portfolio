@@ -19,6 +19,25 @@ import {
 import { motion } from "framer-motion";
 import { RiNextjsFill } from "react-icons/ri";
 
+const skill = [
+  "HTML/CSS",
+  "JavaScript/ TypeScript",
+  "Java",
+  "React.js",
+  "Redux",
+  "Next.js",
+  "Node.js",
+  "Express.js",
+  "MongoDB",
+  "Mongoose",
+  "MySQL",
+  "Tailwind CSS",
+  "Bootstrap",
+  "Docker",
+  "Stripe Payment",
+  "Git",
+  "GitHub",
+];
 const skills = [
   {
     icon: <FaHtml5 className="text-orange-500 w-6 h-6" />,
@@ -80,29 +99,43 @@ const skills = [
 ];
 
 const Skills = () => {
-  const duplicatedSkills = [...skills, ...skills]; // Duplicating skills to ensure continuous scrolling
+  const duplicatedSkills = [...skills, ...skills, ...skills]; // Duplicating skills to ensure continuous scrolling
 
   return (
-    <section className="pt-16 pb-20 border-b border-b-gray-800" id="skills">
-      <div className="mx-auto max-w-[1440px]">
-        <h2 className="text-xl md:text-2xl font-bold text-center text-yellow-500 mb-5 tracking-wider pb-5">
-          MY SKILLS
+    <section
+      className="px-5 lg:px-0 pt-16 pb-10 border-t border-t-gray-800"
+      id="skills"
+    >
+      <div className="mx-auto max-w-5xl pb-10">
+        <h2 className="text-xl md:text-2xl font-bold text-yellow-500 text-center mb-10">
+          Skills
         </h2>
 
-        <div className="flex flex-col gap-10 border-2 border-gray-500 rounded-lg items-center mx-4 py-4 lg:py-6 px-1 overflow-hidden">
+        <div className="flex flex-wrap gap-2 text-sm mb-10">
+          {skill.map((item, index) => (
+            <span
+              key={item + index}
+              className="rounded-md px-2 py-1 bg-teal-700 hover:bg-teal-800 text-white"
+            >
+              {item}
+            </span>
+          ))}
+        </div>
+
+        <div className="flex flex-col gap-10 border-2 border-gray-500 rounded-lg items-center py-4 overflow-hidden">
           <motion.div
-            className="flex gap-12"
+            className="flex gap-x-12"
             animate={{ x: [0, -1000] }} // Adjust x values based on your content width
-            transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
+            transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
           >
             {duplicatedSkills.map((skill, index) => (
               <div key={index} className="flex flex-col gap-2 items-center">
                 <div>
                   <span>{skill.icon}</span>
                 </div>
-                <span className="text-gray-400 font-semibold text-xs lg:text-base">
+                {/* <span className="text-gray-400 font-semibold text-xs lg:text-base">
                   {skill.name}
-                </span>
+                </span> */}
               </div>
             ))}
           </motion.div>
