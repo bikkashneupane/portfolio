@@ -33,12 +33,12 @@ const Navigation = () => {
         initial={{ y: "-100%" }}
         animate={{ y: 0 }}
         transition={{ type: "tween", duration: 0.6, ease: "easeInOut" }}
-        className="fixed top-0 left-0 w-full bg-black border-b border-b-gray-800 text-gray-300 z-50"
+        className="fixed top-0 left-0 w-full bg-gray-950 text-gray-300 z-50"
       >
         <div className="flex justify-between items-center p-4 mx-auto max-w-[1440px] h-[80px]">
           <a href="#" className="font-bold text-2xl tracking-wider">
-            <span className="text-white">Bik</span>
-            <span className="text-teal-600">ash</span>
+            <span className="text-white">BIK</span>
+            <span className="text-teal-600">ASH</span>
           </a>
           <div className="hidden md:flex md:justify-between md:space-x-10 font-semibold">
             {navItems.map((item, index) => (
