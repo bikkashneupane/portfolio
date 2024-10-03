@@ -24,11 +24,8 @@ const contact = [
 
 const Contact = () => {
   return (
-    <section
-      id="contact"
-      className="my-16 py-10 border-y border-y-gray-800 text-sm"
-    >
-      <div className="mx-auto max-w-5xl flex flex-col">
+    <section id="contact" className="my-16 text-sm">
+      <div className="mx-auto max-w-5xl flex flex-col border-t border-t-gray-800 py-10">
         <div className="text-center">
           <h2 className="text-xl font-bold text-yellow-500 text-center mb-2">
             Contact Me

@@ -102,11 +102,8 @@ const Skills = () => {
   const duplicatedSkills = [...skills, ...skills, ...skills]; // Duplicating skills to ensure continuous scrolling
 
   return (
-    <section
-      className="px-3 lg:px-0 pt-12 pb-10 border-t border-t-gray-800"
-      id="skills"
-    >
-      <div className="mx-auto max-w-5xl pb-10">
+    <section className="px-3 lg:px-0 mb-10 " id="skills">
+      <div className="mx-auto max-w-5xl pt-12 pb-10 border-t border-t-gray-800">
         <h2 className="text-xl font-bold text-yellow-500 text-center mb-4">
           Skills
         </h2>

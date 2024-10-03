@@ -10,8 +10,8 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <div>
-      <Hero />
       <Navigation />
+      <Hero />
       <div className="flex flex-col">
         <About />
         <Skills />
