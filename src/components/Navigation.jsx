@@ -4,11 +4,11 @@ import { GiGiftOfKnowledge } from "react-icons/gi";
 import { motion } from "framer-motion";
 
 const navItems = [
-  { icon: <FaHome />, name: "HOME", to: "#hero" },
-  { icon: <FaUser />, name: "ABOUT", to: "#about" },
-  { icon: <FaProjectDiagram />, name: "PROJECTS", to: "#projects" },
-  { icon: <GiGiftOfKnowledge />, name: "SKILLS", to: "#skills" },
-  { icon: <FaEnvelope />, name: "CONTACT", to: "#contact" },
+  { icon: <FaHome />, name: "Home", to: "#hero" },
+  { icon: <FaUser />, name: "About", to: "#about" },
+  { icon: <FaProjectDiagram />, name: "Projects", to: "#projects" },
+  { icon: <GiGiftOfKnowledge />, name: "Skills", to: "#skills" },
+  { icon: <FaEnvelope />, name: "Contact", to: "#contact" },
 ];
 
 const Navigation = () => {
@@ -49,7 +49,7 @@ const Navigation = () => {
                 onClick={(e) => handleClick(e, item.to)}
               >
                 <span className="flex flex-col items-center gap-1">
-                  {item.icon}
+                  {/* {item.icon} */}
                   <span>{item.name}</span>
                 </span>
               </a>

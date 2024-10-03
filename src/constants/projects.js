@@ -4,7 +4,7 @@ import ntdl from "../assets/ntdl.png";
 import movie from "../assets/movie.png";
 import pagination from "../assets/pagination.png";
 import netflixgpt from "../assets/netflix_gpt.png";
-import vikiasmy_watch from "../assets/Vikiasmy_watches.png";
+import vikiasmy_watch from "../assets/vikiasmy.png";
 import vikiasmy_watch_2 from "../assets/vikiasmy_watches/Vikiasmy_watches_2.png";
 import vikiamy_admin_cms from "../assets/Vikiasmy_Admin_CMS.png";
 

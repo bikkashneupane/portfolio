@@ -60,7 +60,7 @@ const skills = [
     name: "React",
   },
   {
-    icon: <RiNextjsFill className="text-black-400 w-6 h-6" />,
+    icon: <RiNextjsFill className="text-black-400 w-6 h-6 text-white" />,
     name: "Next.js",
   },
   {
@@ -72,7 +72,7 @@ const skills = [
     name: "MongoDB",
   },
   {
-    icon: <SiExpress className="text-gray-400 w-6 h-6" />,
+    icon: <SiExpress className="text-white w-6 h-6" />,
     name: "Express",
   },
   {
@@ -95,7 +95,7 @@ const skills = [
     icon: <FaGit className="text-red-500 w-6 h-6" />,
     name: "Git",
   },
-  { icon: <FaGithub className="w-6 h-6" />, name: "GitHub" },
+  { icon: <FaGithub className="w-6 h-6 text-white" />, name: "GitHub" },
 ];
 
 const Skills = () => {
@@ -103,15 +103,15 @@ const Skills = () => {
 
   return (
     <section
-      className="px-5 lg:px-0 pt-16 pb-10 border-t border-t-gray-800"
+      className="px-3 lg:px-0 pt-12 pb-10 border-t border-t-gray-800"
       id="skills"
     >
       <div className="mx-auto max-w-5xl pb-10">
-        <h2 className="text-xl md:text-2xl font-bold text-yellow-500 text-center mb-10">
+        <h2 className="text-xl font-bold text-yellow-500 text-center mb-4">
           Skills
         </h2>
 
-        <div className="flex flex-wrap gap-2 text-sm mb-10">
+        <div className="flex flex-wrap gap-2 text-sm mb-4">
           {skill.map((item, index) => (
             <span
               key={item + index}
@@ -122,7 +122,7 @@ const Skills = () => {
           ))}
         </div>
 
-        <div className="flex flex-col gap-10 border-2 border-gray-500 rounded-lg items-center py-4 overflow-hidden">
+        <div className="flex flex-col gap-10 border-2 border-gray-700 rounded-lg items-center py-4 overflow-hidden">
           <motion.div
             className="flex gap-x-12"
             animate={{ x: [0, -1000] }} // Adjust x values based on your content width
