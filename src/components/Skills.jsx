@@ -19,9 +19,11 @@ import {
 import { motion } from "framer-motion";
 import { RiNextjsFill } from "react-icons/ri";
 
-const skill = [
-  "HTML/CSS",
-  "JavaScript/ TypeScript",
+const techSkills = [
+  "HTML5",
+  "CSS3",
+  "JavaScript",
+  "TypeScript",
   "Java",
   "React.js",
   "Redux",
@@ -38,6 +40,7 @@ const skill = [
   "Git",
   "GitHub",
 ];
+
 const skills = [
   {
     icon: <FaHtml5 className="text-orange-500 w-6 h-6" />,
@@ -60,7 +63,7 @@ const skills = [
     name: "React",
   },
   {
-    icon: <RiNextjsFill className="text-black-400 w-6 h-6 text-white" />,
+    icon: <RiNextjsFill className="text-black w-6 h-6 dark:text-white" />,
     name: "Next.js",
   },
   {
@@ -72,7 +75,7 @@ const skills = [
     name: "MongoDB",
   },
   {
-    icon: <SiExpress className="text-white w-6 h-6" />,
+    icon: <SiExpress className="text-black dark:text-white w-6 h-6" />,
     name: "Express",
   },
   {
@@ -95,31 +98,34 @@ const skills = [
     icon: <FaGit className="text-red-500 w-6 h-6" />,
     name: "Git",
   },
-  { icon: <FaGithub className="w-6 h-6 text-white" />, name: "GitHub" },
+  {
+    icon: <FaGithub className="w-6 h-6 text-black dark:text-white" />,
+    name: "GitHub",
+  },
 ];
 
 const Skills = () => {
   const duplicatedSkills = [...skills, ...skills, ...skills]; // Duplicating skills to ensure continuous scrolling
 
   return (
-    <section className="px-3 lg:px-0 mb-10 " id="skills">
-      <div className="mx-auto max-w-5xl pt-12 pb-10 border-t border-t-gray-800">
-        <h2 className="text-xl font-bold text-yellow-500 text-center mb-4">
+    <section className="px-3 lg:px-0 mt-16 " id="skills">
+      <div className="mx-auto max-w-5xl">
+        <h2 className="mb-5 text-xl font-bold text-yellow-500 dark:text-yellow-600 text-center">
           Skills
         </h2>
 
         <div className="flex flex-wrap gap-2 text-sm mb-4">
-          {skill.map((item, index) => (
+          {techSkills.map((item, index) => (
             <span
               key={item + index}
-              className="rounded-md px-2 py-1 bg-teal-700 hover:bg-teal-800 text-white"
+              className="rounded-md px-2 py-1 bg-purple-900 dark:bg-purple-950 hover:bg-purple-800 text-gray-200 text-semibold"
             >
               {item}
             </span>
           ))}
         </div>
 
-        <div className="flex flex-col gap-10 border-2 border-gray-700 rounded-lg items-center py-4 overflow-hidden">
+        <div className="flex flex-col gap-10 border border-gray-300 dark:border-gray-700 rounded-lg items-center py-4 overflow-hidden">
           <motion.div
             className="flex gap-x-12"
             animate={{ x: [0, -1000] }} // Adjust x values based on your content width

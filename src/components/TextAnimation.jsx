@@ -14,7 +14,7 @@ const TextAnimation = () => {
       ]}
       wrapper="span"
       speed={50}
-      className="text-xl md:text-3xl text-yellow-500 font-extrabold uppercase"
+      className="text-2xl text-yellow-500 font-extrabold uppercase"
       repeat={Infinity}
     />
   );

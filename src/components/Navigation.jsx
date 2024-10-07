@@ -29,6 +29,7 @@ const Navigation = () => {
   return (
     <nav className="z-50">
       {/* Desktop Navigation */}
+
       <motion.div
         initial={{ y: "-100%" }}
         animate={{ y: 0 }}
@@ -36,11 +37,12 @@ const Navigation = () => {
         className="fixed top-0 left-0 w-full bg-gray-950 text-gray-300 z-50"
       >
         <div className="flex justify-between items-center p-4 mx-auto max-w-[1440px] h-[80px]">
-          <a href="#" className="font-bold text-2xl tracking-wider">
+          <a href="#" className="font-bold text-xl md:text-2xl tracking-wider">
             <span className="text-white">BIK</span>
             <span className="text-teal-600">ASH</span>
           </a>
-          <div className="hidden md:flex md:justify-between md:space-x-10 font-semibold">
+
+          <div className="hidden md:flex md:justify-between items-center md:space-x-10 font-semibold">
             {navItems.map((item, index) => (
               <a
                 href={item.to}
