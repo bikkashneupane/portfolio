@@ -35,7 +35,7 @@ export const projects = [
     description:
       "An admin CMS for managing products and users on Vikiamy's e-commerce platform, featuring secure access and a user-friendly interface.",
     tech: ["React", "Node", "Express", "MongoDB", "Tailwind", "Redux"],
-    link: "https://vikiasmy-admin.bikashneupane.com/",
+    link: "https://vikiasmy-admin.bikashneupane.com",
     github: "https://github.com/bikkashneupane/ui_admin_cms",
     linkedin:
       "https://www.linkedin.com/posts/bikkashneupane_mern-react-node-activity-7236701816988536835-4kKF?utm_source=share&utm_medium=member_desktop",
@@ -46,7 +46,7 @@ export const projects = [
     description:
       "A personal portfolio showcasing my skills and projects as a Full Stack Developer, with a modern design and interactive UI.",
     tech: ["React", "Tailwind"],
-    link: "https://info.bikashneupane.com/",
+    link: "https://bikashneupane.com",
     github: "https://github.com/bikkashneupane/portfolio",
   },
   {

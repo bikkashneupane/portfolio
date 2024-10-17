@@ -2,7 +2,7 @@ import portfolio from "../assets/portfolio_bg.png";
 
 const About = () => {
   return (
-    <section className="mt-10 text-gray-700 dark:text-gray-400" id="about">
+    <section className="mt-10 dark:text-gray-300" id="about">
       <div className="mx-auto max-w-5xl px-3 lg:px-0">
         <h2 className="mb-5 text-xl font-bold text-yellow-500 dark:text-yellow-600 text-center">
           About

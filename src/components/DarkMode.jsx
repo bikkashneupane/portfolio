@@ -5,7 +5,7 @@ const DarkMode = ({ isDark, toggleDarkMode }) => {
   return (
     <div className="fixed bottom-5 right-5 z-50">
       <button
-        className="transform transition hover:text-white bg-gray-900 dark:bg-gray-300 dark:text-gray-600 text-gray-300 dark:hover:text-black p-2 rounded-full outline-none"
+        className="bg-black dark:bg-white text-white dark:text-black p-2 rounded-full outline-none transition-all ease-in-out"
         onClick={toggleDarkMode}
       >
         {isDark ? (

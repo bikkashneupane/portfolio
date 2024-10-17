@@ -38,7 +38,7 @@ const Hero = () => {
           className="flex flex-col items-center gap-2"
         >
           <a
-            href="/assets/Bikash-Neupane-Resume.pdf"
+            href="/assets/Bikash_Neupane_Resume.pdf"
             download="bikash-neupane-resume.pdf"
           >
             <button className="flex items-center mt-10 px-10 py-4 text-gray-100 bg-teal-800 rounded-lg shadow-lg font-semibold hover:bg-teal-600">

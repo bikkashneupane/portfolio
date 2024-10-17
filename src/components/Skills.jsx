@@ -118,7 +118,7 @@ const Skills = () => {
           {techSkills.map((item, index) => (
             <span
               key={item + index}
-              className="rounded-md px-2 py-1 bg-purple-900 dark:bg-purple-950 hover:bg-purple-800 text-gray-200 text-semibold"
+              className="rounded-md px-2 py-1 bg-purple-800 dark:bg-purple-950 hover:bg-purple-800 text-gray-200 text-semibold"
             >
               {item}
             </span>

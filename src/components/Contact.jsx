@@ -40,7 +40,7 @@ const Contact = () => {
                   key={index}
                   href={mail ? `mailto:${link}` : link}
                   target="_blank"
-                  className="dark:text-gray-400 flex lg:flex-col items-center gap-4 md:gap-2 border border-gray-300 dark:border-gray-700 py-3 px-4 rounded-md hover:bg-teal-600 transition-transform delay-75 hover:text-white dark:hover:text-white ease-in-out"
+                  className="dark:text-gray-400 flex lg:flex-col items-center gap-4 md:gap-2 border border-gray-300 dark:border-gray-700 py-3 px-4 rounded-md hover:bg-teal-600 transition-colors duration-300 ease-in-out hover:text-white dark:hover:text-white"
                 >
                   {icon}
                   <span>{name ?? link}</span>
@@ -49,7 +49,7 @@ const Contact = () => {
                 <a
                   key={index}
                   href={`tel:${phone}`}
-                  className="dark:text-gray-400 flex lg:flex-col items-center gap-4 md:gap-2 border border-gray-300 dark:border-gray-700 py-3 px-4 rounded-md hover:bg-teal-600 transition-transform delay-75 hover:text-white dark:hover:text-white ease-in-out"
+                  className="dark:text-gray-400 flex lg:flex-col items-center gap-4 md:gap-2 border border-gray-300 dark:border-gray-700 py-3 px-4 rounded-md hover:bg-teal-600 transition-colors duration-300 ease-in-out hover:text-white dark:hover:text-white"
                 >
                   {icon}
                   <span>{phone}</span>
