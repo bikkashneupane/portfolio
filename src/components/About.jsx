@@ -2,7 +2,7 @@ import portfolio from "../assets/portfolio_bg.png";
 
 const About = () => {
   return (
-    <section className="mt-10 dark:text-gray-300" id="about">
+    <section className="mt-10 dark:text-white" id="about">
       <div className="mx-auto max-w-5xl px-3 lg:px-0">
         <h2 className="mb-5 text-xl font-bold text-yellow-500 dark:text-yellow-600 text-center">
           About
@@ -40,7 +40,7 @@ const About = () => {
                 <span>Graduate</span>
               </div>
               <div className="flex flex-col lg:flex-row lg:gap-1 items-center">
-                <span className="text-yellow-500">2+ Years</span>
+                <span className="text-yellow-500">1+ Years</span>
                 <span>Experience</span>
               </div>
               <div className="flex flex-col lg:flex-row lg:gap-1 items-center">

@@ -9,11 +9,11 @@ const Projects = () => {
         <h2 className="mb-5 text-xl font-bold text-yellow-500 dark:text-yellow-600 text-center">
           My Projects
         </h2>
-        <p className="text-center mb-10 dark:text-gray-200">
+        <p className="text-center mb-10 dark:text-gray-400">
           I've worked on a variety of projects, from simple websites to complex
           web applications. Here are a few of my favorites.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-16 md:gap-y-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-16 md:gap-y-4">
           {projects.map(
             (
               { name, thumbnail, description, tech, link, github, linkedin },
@@ -24,7 +24,7 @@ const Projects = () => {
                   href={link}
                   target="_blank"
                   key={index}
-                  className="relative pb-2 rounded-lg border dark:border-gray-800 shadow-md group"
+                  className="relative pb-2 rounded-lg border dark:border-gray-800 shadow-md group cursor-pointer"
                 >
                   <img
                     src={thumbnail}

@@ -125,7 +125,7 @@ const Skills = () => {
           ))}
         </div>
 
-        <div className="flex flex-col gap-10 border border-gray-300 dark:border-gray-700 rounded-lg items-center py-4 overflow-hidden">
+        <div className="py-2 border border-gray-300 dark:border-gray-700 rounded-lg overflow-hidden">
           <motion.div
             className="flex gap-x-12"
             animate={{ x: [0, -1000] }} // Adjust x values based on your content width
@@ -133,12 +133,10 @@ const Skills = () => {
           >
             {duplicatedSkills.map((skill, index) => (
               <div key={index} className="flex flex-col gap-2 items-center">
-                <div>
-                  <span>{skill.icon}</span>
-                </div>
-                {/* <span className="text-gray-400 font-semibold text-xs lg:text-base">
+                <span>{skill.icon}</span>
+                <span className="dark:text-gray-400 text-xs font-semibold">
                   {skill.name}
-                </span> */}
+                </span>
               </div>
             ))}
           </motion.div>

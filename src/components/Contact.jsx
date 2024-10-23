@@ -33,14 +33,14 @@ const Contact = () => {
           <p className="dark:text-gray-400 mb-10">
             Lets get in touch! Feel free to reach out via email or phone.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-6 pb-8 px-5 rounded-lg self-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-6 pb-8 px-5 rounded-lg self-center dark:text-white">
             {contact.map(({ icon, link, phone, mail, name }, index) =>
               !phone ? (
                 <a
                   key={index}
                   href={mail ? `mailto:${link}` : link}
                   target="_blank"
-                  className="dark:text-gray-400 flex lg:flex-col items-center gap-4 md:gap-2 border border-gray-300 dark:border-gray-700 py-3 px-4 rounded-md hover:bg-teal-600 transition-colors duration-300 ease-in-out hover:text-white dark:hover:text-white"
+                  className="flex lg:flex-col items-center gap-4 md:gap-2 border border-gray-300 dark:border-gray-700 py-3 px-4 rounded-md hover:bg-teal-600 hover:text-white transition-colors duration-300 ease-in-out"
                 >
                   {icon}
                   <span>{name ?? link}</span>
@@ -49,7 +49,7 @@ const Contact = () => {
                 <a
                   key={index}
                   href={`tel:${phone}`}
-                  className="dark:text-gray-400 flex lg:flex-col items-center gap-4 md:gap-2 border border-gray-300 dark:border-gray-700 py-3 px-4 rounded-md hover:bg-teal-600 transition-colors duration-300 ease-in-out hover:text-white dark:hover:text-white"
+                  className="flex lg:flex-col items-center gap-4 md:gap-2 border border-gray-300 dark:border-gray-700 py-3 px-4 rounded-md hover:bg-teal-600 hover:text-white transition-colors duration-300 ease-in-out"
                 >
                   {icon}
                   <span>{phone}</span>

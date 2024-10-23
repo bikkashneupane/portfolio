@@ -7,5 +7,5 @@
 }
 
 body {
-  @apply dark:bg-gray-900 dark:text-white text-sm scroll-smooth;
+  @apply dark:bg-black dark:text-white text-sm scroll-smooth;
 }

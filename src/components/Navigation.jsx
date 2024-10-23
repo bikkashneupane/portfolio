@@ -34,7 +34,7 @@ const Navigation = () => {
         initial={{ y: "-100%" }}
         animate={{ y: 0 }}
         transition={{ type: "tween", duration: 0.6, ease: "easeInOut" }}
-        className="fixed top-0 left-0 w-full bg-gray-950 text-gray-300 z-50"
+        className="fixed top-0 left-0 right-0 bg-gray-950 text-white z-50"
       >
         <div className="flex justify-between items-center p-4 mx-auto max-w-[1440px] h-[80px]">
           <a href="#" className="font-bold text-xl md:text-2xl tracking-wider">
@@ -50,10 +50,10 @@ const Navigation = () => {
                 className="group flex items-center transform transition hover:text-teal-500"
                 onClick={(e) => handleClick(e, item.to)}
               >
-                <span className="flex flex-col items-center gap-1">
-                  {/* {item.icon} */}
+                <div className="flex flex-col items-center gap-1">
+                  {/* <span>{item.icon}</span> */}
                   <span>{item.name}</span>
-                </span>
+                </div>
               </a>
             ))}
           </div>
