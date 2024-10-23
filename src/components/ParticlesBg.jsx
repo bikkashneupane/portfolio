@@ -6,7 +6,6 @@ import { loadFull } from "tsparticles";
 export default function ParticlesBg() {
   const [init, setInit] = useState(false);
   useEffect(() => {
-    console.log("init");
     initParticlesEngine(async (engine) => {
       await loadFull(engine);
     }).then(() => {

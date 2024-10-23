@@ -3,6 +3,10 @@ import github_bikash from "../assets/github_bikash.mov";
 import { FaGithub, FaLink, FaLinkedin } from "react-icons/fa";
 
 const Projects = () => {
+  const linkOpener = (link) => {
+    window.open(link, "_blank");
+  };
+
   return (
     <section className="" id="projects">
       <div className="mx-auto max-w-5xl mt-20 px-3">
@@ -20,9 +24,8 @@ const Projects = () => {
               index
             ) => {
               return (
-                <a
-                  href={link}
-                  target="_blank"
+                <div
+                  onClick={() => linkOpener(link)}
                   key={index}
                   className="relative pb-2 rounded-lg border dark:border-gray-800 shadow-md group cursor-pointer"
                 >
@@ -62,14 +65,13 @@ const Projects = () => {
                       </a>
                     </div>
                   </div>
-                </a>
+                </div>
               );
             }
           )}
-          <a
-            href="https://github.com/bikkashneupane/"
-            target="_blank"
-            className="relative pb-2 rounded-lg border border-gray-100 dark:border-gray-700 shadow-md  max-w-[350px]"
+          <div
+            onClick={() => linkOpener("https://github.com/bikkashneupane")}
+            className="relative pb-2 rounded-lg border border-gray-100 dark:border-gray-700 shadow-md  max-w-[350px] cursor-pointer"
           >
             <video
               src={github_bikash}
@@ -97,7 +99,7 @@ const Projects = () => {
                 <FaGithub className="text-gray-500 w-6 h-6 hover:text-black hover:dark:text-white" />
               </a>
             </div>
-          </a>
+          </div>
         </div>
       </div>
     </section>

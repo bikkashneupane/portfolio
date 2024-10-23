@@ -1,6 +1,10 @@
+import { useRef } from "react";
 import portfolio from "../assets/portfolio_bg.png";
 
 const About = () => {
+  const aboutRef = useRef("");
+  // console.log(aboutRef);
+
   return (
     <section className="mt-10 dark:text-white" id="about">
       <div className="mx-auto max-w-5xl px-3 lg:px-0">
