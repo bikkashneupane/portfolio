@@ -1,8 +1,7 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import TextAnimation from "./TextAnimation";
 import { motion } from "framer-motion";
-
-const heroImg = "https://wallpapercave.com/wp/wp7890200.jpg";
+import heroImg from "../assets/hero.jpg";
 
 const Hero = () => {
   return (
@@ -10,7 +9,7 @@ const Hero = () => {
       id="hero"
       className="relative text-white min-h-screen"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${heroImg})`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(${heroImg})`,
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         backgroundSize: "cover",
