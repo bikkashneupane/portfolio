@@ -1,10 +1,6 @@
-import { useRef } from "react";
 import portfolio from "../assets/portfolio_bg.png";
 
 const About = () => {
-  const aboutRef = useRef("");
-  // console.log(aboutRef);
-
   return (
     <section className="mt-10 dark:text-white" id="about">
       <div className="mx-auto max-w-5xl px-3 lg:px-0">
@@ -14,20 +10,26 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-5 ">
           <div className="py-2 text-justify">
             <p>
-              I am a dedicated Software Developer with a Bachelor's degree in
-              Information Technology, specializing in full-stack development
-              using the MERN stack (MongoDB, Express, React, and Node.js).
+              I am a highly motivated and results-driven Full Stack Developer
+              with a solid foundation in both front-end and back-end
+              technologies, including React.js, Node.js, Express.js and MongoDB.
+              My expertise lies in building scalable, high-performance web
+              applications that prioritize intuitive user experiences and
+              robust, efficient backend systems.
               <br />
               <br />
-              My expertise spans both frontend and backend development, allowing
-              me to build seamless and efficient web applications. With a keen
-              eye for design and a strong passion for crafting innovative
-              digital solutions, I continuously strive to deliver exceptional
-              user experiences and high-quality code.
+              With a proven ability to lead projects and collaborate effectively
+              with cross-functional teams, I adapt quickly to new technologies,
+              ensuring I stay at the forefront of industry trends. I am
+              passionate about delivering innovative solutions that enhance
+              business success and drive user satisfaction.
               <br />
-              <br />I thrive on solving complex problems and am always eager to
-              learn new technologies and improve my skills.
+              <br />
+              My continuous dedication to learning and solving complex
+              challenges empowers me to create impactful digital solutions that
+              not only meet but exceed expectations.
             </p>
+
             <div className="mt-3">
               <h3 className="font-semibold dark:text-teal-500 text-teal-600">
                 Qualification
@@ -38,7 +40,7 @@ const About = () => {
               </h3>
               <p>Sydney, Australia</p>
             </div>
-            <div className="mt-3 w-full border dark:border-gray-700 border-gray-300 py-4 rounded-md flex justify-between px-5 items-center font-semibold text-teal-600 dark:text-teal-500">
+            {/* <div className="mt-3 w-full border dark:border-gray-700 border-gray-300 py-4 rounded-md flex justify-between px-5 items-center font-semibold text-teal-600 dark:text-teal-500">
               <div className="flex flex-col lg:flex-row lg:gap-1 items-center">
                 <span className="text-yellow-500">IT</span>
                 <span>Graduate</span>
@@ -51,7 +53,7 @@ const About = () => {
                 <span className="text-yellow-500">10+</span>
                 <span>Projects</span>
               </div>
-            </div>
+            </div> */}
           </div>
           <div className="flex justify-center items-center">
             <img

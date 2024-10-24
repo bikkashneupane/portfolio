@@ -1,18 +1,14 @@
 import portfolio from "../assets/portfolio.png";
-import library from "../assets/library.png";
-import ntdl from "../assets/ntdl.png";
-import movie from "../assets/movie.png";
 import pagination from "../assets/pagination.png";
 import netflixgpt from "../assets/netflix_gpt.png";
 import vikiasmy_watch from "../assets/vikiasmy.png";
-import vikiasmy_watch_2 from "../assets/vikiasmy_watches/Vikiasmy_watches_2.png";
 import vikiamy_admin_cms from "../assets/Vikiasmy_Admin_CMS.png";
+import github_bikash from "../assets/github_bikash.mov";
 
 export const projects = [
   {
-    name: "Vikiasmy's Watch Haven",
+    name: "React E-Commerce Full Stack",
     thumbnail: vikiasmy_watch,
-    images: [vikiasmy_watch, vikiasmy_watch_2],
     description:
       "A full-stack e-commerce site for luxury watches with a dynamic CMS and secure payment options. Built with the MERN stack.",
     tech: [
@@ -30,7 +26,7 @@ export const projects = [
       "https://www.linkedin.com/posts/bikkashneupane_mern-react-node-activity-7233743990376820736-82qa?utm_source=share&utm_medium=member_desktop",
   },
   {
-    name: "Vikiamy's Admin CMS",
+    name: "React Admin CMS Full Stack",
     thumbnail: vikiamy_admin_cms,
     description:
       "An admin CMS for managing products and users on Vikiamy's e-commerce platform, featuring secure access and a user-friendly interface.",
@@ -59,33 +55,6 @@ export const projects = [
     github: "https://github.com/bikkashneupane/NetflixGPT",
   },
   {
-    name: "Digital Library Portal",
-    thumbnail: library,
-    description:
-      "A digital library system for managing book loans and reviews, focusing on user-friendly operations.",
-    tech: ["React", "Node", "Express", "MongoDB", "Bootstrap"],
-    link: "https://library-management-mern.vercel.app",
-    github:
-      "https://github.com/bikkashneupane/MERN_FullStack_Frontend_Library_Management",
-  },
-  {
-    name: "Not-To-Do List App",
-    thumbnail: ntdl,
-    description:
-      "A productivity app to track unproductive tasks and help users focus on positive habits.",
-    tech: ["React", "Node", "Express", "MongoDB", "Bootstrap"],
-    link: "https://not-to-do-list-frontend-react-qlsp.vercel.app",
-  },
-  {
-    name: "Movie Wishlist Organizer",
-    thumbnail: movie,
-    description:
-      "An app to search and manage your movie watchlist, allowing custom categories for movie enthusiasts.",
-    tech: ["React", "Bootstrap"],
-    link: "https://movie-list-react-fawn.vercel.app",
-    github: "https://github.com/bikkashneupane/not-to-do-list-frontend-react",
-  },
-  {
     name: "Paginate Pro",
     thumbnail: pagination,
     description:
@@ -93,5 +62,12 @@ export const projects = [
     tech: ["React", "Tailwind"],
     link: "https://pagination-simplified.vercel.app/",
     github: "https://github.com/bikkashneupane/Pagination-Simplified",
+  },
+  {
+    name: "More Projects",
+    video: github_bikash,
+    description:
+      " Explore more projects on my github page ranging both simpler and complex projects.",
+    github: "https://github.com/bikkashneupane",
   },
 ];
