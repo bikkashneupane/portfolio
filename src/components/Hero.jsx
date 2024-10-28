@@ -2,6 +2,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import TextAnimation from "./TextAnimation";
 import { motion } from "framer-motion";
 import heroImg from "../assets/hero.jpg";
+// import portfolio from "../assets/portfolio_bg.png";
 
 const Hero = () => {
   return (
@@ -16,6 +17,13 @@ const Hero = () => {
         zIndex: 0,
       }}
     >
+      {/* <div className="absolute left-1/2 h-full flex justify-center items-center">
+        <img
+          src={portfolio}
+          alt="Bikash's Image"
+          className="h-[350px] lg:h-[380px] rounded-full border border-gray-500"
+        />
+      </div> */}
       <motion.div
         initial={{ x: "100vw" }}
         animate={{ x: 0 }}

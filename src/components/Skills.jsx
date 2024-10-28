@@ -80,7 +80,7 @@ const skills = [
   },
   {
     icon: <SiTailwindcss className="text-cyan-500 w-6 h-6" />,
-    name: "Tailwind CSS",
+    name: "Tailwind",
   },
   {
     icon: <SiBootstrap className="text-purple-500 w-6 h-6" />,

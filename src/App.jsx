@@ -26,7 +26,8 @@ function App() {
   return (
     <>
       <Navigation />
-      {!isDark && <ParticlesBg />}
+      {/* {!isDark && <ParticlesBg />} */}
+      <ParticlesBg />
       <Hero />
       <About />
       <Skills />
