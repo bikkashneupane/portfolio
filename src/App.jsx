@@ -11,7 +11,7 @@ import DarkMode from "./components/DarkMode";
 import { useEffect, useState } from "react";
 
 function App() {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
