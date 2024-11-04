@@ -1,6 +1,7 @@
 import { projects } from "../constants/projects";
 import github_bikash from "../assets/github_bikash.mov";
 import { FaGithub, FaLink, FaLinkedin } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   const linkOpener = (link) => {
@@ -8,7 +9,7 @@ const Projects = () => {
   };
 
   return (
-    <section className="" id="projects">
+    <section id="projects">
       <div className="mx-auto max-w-5xl mt-20 px-3">
         <h2 className="mb-5 text-xl font-bold text-yellow-500 dark:text-yellow-600 text-center">
           My Projects
@@ -33,12 +34,19 @@ const Projects = () => {
               index
             ) => {
               return video ? (
-                <div
+                <motion.div
+                  initial={{ scale: 0.5, opacity: 0 }}
+                  whileInView={{
+                    opacity: 1,
+                    scale: 1,
+                    animation: "ease-in-out",
+                  }}
+                  transition={{ duration: 1.5, type: "spring" }}
                   key={index}
                   onClick={() =>
                     linkOpener("https://github.com/bikkashneupane")
                   }
-                  className="relative pb-2 rounded-lg border border-gray-100 dark:border-gray-700 shadow-md  max-w-[350px] cursor-pointer"
+                  className="relative pb-2 rounded-lg border dark:border-gray-800 shadow-md  max-w-[350px] cursor-pointer"
                 >
                   <video
                     src={github_bikash}
@@ -63,12 +71,15 @@ const Projects = () => {
                       target="_blank"
                       className="dark:text-white"
                     >
-                      <FaGithub className="text-gray-500 w-6 h-6 hover:text-black hover:dark:text-white" />
+                      <FaGithub className="text-gray-600 dark:text-gray-300 w-6 h-6 hover:text-black hover:dark:text-white" />
                     </a>
                   </div>
-                </div>
+                </motion.div>
               ) : (
-                <div
+                <motion.div
+                  initial={{ scale: 0.5, opacity: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 1.5 }}
                   onClick={() => linkOpener(link)}
                   key={index}
                   className="relative pb-2 rounded-lg border dark:border-gray-800 shadow-md group cursor-pointer"
@@ -109,7 +120,7 @@ const Projects = () => {
                       </a>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               );
             }
           )}

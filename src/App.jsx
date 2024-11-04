@@ -9,6 +9,7 @@ import "./App.css";
 import ParticlesBg from "./components/ParticlesBg";
 import DarkMode from "./components/DarkMode";
 import { useEffect, useState } from "react";
+import Experience from "./components/Experience";
 
 function App() {
   const [isDark, setIsDark] = useState(true);
@@ -30,8 +31,9 @@ function App() {
       <ParticlesBg />
       <Hero />
       <About />
-      <Skills />
+      {/* <Experience /> */}
       <Projects />
+      <Skills />
       <Contact />
       <Footer />
       <DarkMode isDark={isDark} toggleDarkMode={toggleDarkMode} />

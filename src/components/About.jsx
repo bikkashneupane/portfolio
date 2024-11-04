@@ -1,6 +1,10 @@
 import portfolio from "../assets/portfolio_bg.png";
+import { motion } from "framer-motion";
+import useAnimation from "../hooks/useAnimation";
 
 const About = () => {
+  const { ref, hasAnimated } = useAnimation();
+
   return (
     <section className="mt-10 dark:text-white" id="about">
       <div className="mx-auto max-w-5xl px-3 lg:px-0">
@@ -8,7 +12,7 @@ const About = () => {
           About
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-5 ">
-          <div className="py-2 text-justify">
+          <div className="mt-2 text-justify">
             <p>
               I am a highly motivated and results-driven Full Stack Developer
               with a solid foundation in both front-end and back-end
@@ -40,7 +44,7 @@ const About = () => {
               </h3>
               <p>Sydney, Australia</p>
             </div>
-            {/* <div className="mt-3 w-full border dark:border-gray-700 border-gray-300 py-4 rounded-md flex justify-between px-5 items-center font-semibold text-teal-600 dark:text-teal-500">
+            <div className="mt-3 w-full border dark:border-gray-700 border-gray-300 py-4 rounded-md flex justify-between px-5 items-center font-semibold text-teal-600 dark:text-teal-500">
               <div className="flex flex-col lg:flex-row lg:gap-1 items-center">
                 <span className="text-yellow-500">IT</span>
                 <span>Graduate</span>
@@ -53,15 +57,21 @@ const About = () => {
                 <span className="text-yellow-500">10+</span>
                 <span>Projects</span>
               </div>
-            </div> */}
+            </div>
           </div>
-          <div className="flex justify-center items-center">
+          <motion.div
+            ref={ref}
+            initial={{ opacity: 0, scale: 0.5 }}
+            transition={{ duration: 1.5, type: "tween" }}
+            animate={hasAnimated ? { opacity: 1, scale: 1 } : {}}
+            className="flex items-end justify-center"
+          >
             <img
               src={portfolio}
               alt="Bikash"
               className="h-[350px] lg:h-[380px]"
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

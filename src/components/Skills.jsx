@@ -6,6 +6,7 @@ import {
   FaNodeJs,
   FaGit,
   FaGithub,
+  FaDocker,
 } from "react-icons/fa";
 import {
   SiMongodb,
@@ -18,6 +19,7 @@ import {
 } from "react-icons/si";
 import { motion } from "framer-motion";
 import { RiNextjsFill } from "react-icons/ri";
+import { SiPostman } from "react-icons/si";
 
 const techSkills = [
   "HTML5",
@@ -101,6 +103,14 @@ const skills = [
   {
     icon: <FaGithub className="w-6 h-6 text-black dark:text-white" />,
     name: "GitHub",
+  },
+  {
+    icon: <FaDocker className="w-6 h-6 text-blue-600" />,
+    name: "Docket",
+  },
+  {
+    icon: <SiPostman className="w-6 h-6 text-orange-600" />,
+    name: "Postman",
   },
 ];
 
