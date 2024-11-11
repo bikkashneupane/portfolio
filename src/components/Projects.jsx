@@ -18,7 +18,7 @@ const Projects = () => {
           I've worked on a variety of projects, from simple websites to complex
           web applications. Here are a few of my favorites.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-16 md:gap-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {projects.map(
             (
               {
@@ -39,9 +39,8 @@ const Projects = () => {
                   whileInView={{
                     opacity: 1,
                     scale: 1,
-                    animation: "ease-in-out",
                   }}
-                  transition={{ duration: 1.5, type: "spring" }}
+                  transition={{ duration: 1, type: "spring" }}
                   key={index}
                   onClick={() =>
                     linkOpener("https://github.com/bikkashneupane")

@@ -5,15 +5,7 @@ import heroImg from "../assets/hero.jpg";
 
 const Hero = () => {
   return (
-    <motion.main
-      initial={{ scale: 1 }}
-      animate={{ scale: [1, 1.03, 1.06, 1.03, 1] }}
-      transition={{
-        type: "tween",
-        duration: 10,
-        repeat: Infinity,
-        ease: "easeInOut",
-      }}
+    <div
       id="hero"
       className="relative text-white min-h-screen"
       style={{
@@ -84,7 +76,7 @@ const Hero = () => {
           </div>
         </motion.div>
       </motion.div>
-    </motion.main>
+    </div>
   );
 };
 
