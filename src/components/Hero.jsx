@@ -37,8 +37,8 @@ const Hero = () => {
           className="flex flex-col items-center gap-2"
         >
           <a
-            href="/assets/Bikash_Neupane_Resume.pdf"
-            download="bikash-neupane-resume.pdf"
+            href="/assets/Software_Developer_Bikash_Neupane.pdf"
+            download="Software_developer_Bikash_Neupane.pdf"
           >
             <button className="flex items-center mt-10 px-10 py-4 text-gray-100 bg-teal-800 rounded-lg shadow-lg font-semibold hover:bg-teal-600">
               <span>Download CV</span>
