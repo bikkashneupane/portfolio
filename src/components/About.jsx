@@ -50,7 +50,7 @@ const About = () => {
                 <span>Graduate</span>
               </div>
               <div className="flex flex-col lg:flex-row lg:gap-1 items-center">
-                <span className="text-yellow-500">1+ Years</span>
+                <span className="text-yellow-500">2+ Years</span>
                 <span>Experience</span>
               </div>
               <div className="flex flex-col lg:flex-row lg:gap-1 items-center">
