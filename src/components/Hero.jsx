@@ -36,12 +36,9 @@ const Hero = () => {
           transition={{ type: "tween", duration: 2, ease: "easeInOut" }}
           className="flex flex-col items-center gap-2"
         >
-          <a
-            href="/assets/Software_Developer_Bikash_Neupane.pdf"
-            download="Software_developer_Bikash_Neupane.pdf"
-          >
+          <a href="https://drive.google.com/uc?export=download&id=18RXm6q1XcsUN1UknEe3IHQOoxL4Xl4z4">
             <button className="flex items-center mt-10 px-10 py-4 text-gray-100 bg-teal-800 rounded-lg shadow-lg font-semibold hover:bg-teal-600">
-              <span>Download CV</span>
+              <span>Download My CV</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 16"
