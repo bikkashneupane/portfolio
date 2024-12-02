@@ -68,6 +68,6 @@ export const projects = [
     video: github_bikash,
     description:
       " Explore more projects on my github page ranging both simpler and complex projects.",
-    github: "https://github.com/bikkashneupane",
+    github: "https://github.com/bikkashneupane?tab=repositories",
   },
 ];
