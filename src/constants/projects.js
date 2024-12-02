@@ -20,7 +20,7 @@ export const projects = [
       "Redux",
       "Stripe",
     ],
-    link: "https://vikiasmy.bikashneupane.com",
+    link: "https://vikiasmy-watches.vercel.app",
     github: "https://github.com/bikkashneupane/Store_Front_UI",
     linkedin:
       "https://www.linkedin.com/posts/bikkashneupane_mern-react-node-activity-7233743990376820736-82qa?utm_source=share&utm_medium=member_desktop",
@@ -31,7 +31,7 @@ export const projects = [
     description:
       "An admin CMS for managing products and users on Vikiamy's e-commerce platform, featuring secure access and a user-friendly interface.",
     tech: ["React", "Node", "Express", "MongoDB", "Tailwind", "Redux"],
-    link: "https://vikiasmy-admin.bikashneupane.com",
+    link: "https://vikiasmy-watches-admin-cms.vercel.app",
     github: "https://github.com/bikkashneupane/ui_admin_cms",
     linkedin:
       "https://www.linkedin.com/posts/bikkashneupane_mern-react-node-activity-7236701816988536835-4kKF?utm_source=share&utm_medium=member_desktop",
