@@ -16,6 +16,10 @@ import {
   SiRedux,
   SiStripe,
   SiTypescript,
+  SiGithubactions,
+  SiPostgresql,
+  SiMysql,
+  SiJest,
 } from "react-icons/si";
 import { motion } from "framer-motion";
 import { RiNextjsFill } from "react-icons/ri";
@@ -45,14 +49,6 @@ const techSkills = [
 
 const skills = [
   {
-    icon: <FaHtml5 className="text-orange-500 w-6 h-6" />,
-    name: "HTML5",
-  },
-  {
-    icon: <FaCss3Alt className="text-blue-500 w-6 h-6" />,
-    name: "CSS3",
-  },
-  {
     icon: <FaJs className="text-yellow-500 w-6 h-6" />,
     name: "JavaScript",
   },
@@ -65,6 +61,10 @@ const skills = [
     name: "React",
   },
   {
+    icon: <SiRedux className="text-purple-400 w-6 h-6" />,
+    name: "Redux",
+  },
+  {
     icon: <RiNextjsFill className="text-black w-6 h-6 dark:text-white" />,
     name: "Next.js",
   },
@@ -73,24 +73,20 @@ const skills = [
     name: "Node.js",
   },
   {
-    icon: <SiMongodb className="text-green-400 w-6 h-6" />,
-    name: "MongoDB",
-  },
-  {
     icon: <SiExpress className="text-black dark:text-white w-6 h-6" />,
     name: "Express",
   },
   {
-    icon: <SiTailwindcss className="text-cyan-500 w-6 h-6" />,
-    name: "Tailwind",
+    icon: <SiMongodb className="text-green-400 w-6 h-6" />,
+    name: "MongoDB",
   },
   {
-    icon: <SiBootstrap className="text-purple-500 w-6 h-6" />,
-    name: "Bootstrap",
+    icon: <SiPostgresql className="w-6 h-6 text-blue-600" />,
+    name: "PostgreSQL",
   },
   {
-    icon: <SiRedux className="text-purple-400 w-6 h-6" />,
-    name: "Redux",
+    icon: <SiMysql className="w-6 h-6 text-orange-500" />,
+    name: "MySQL",
   },
   {
     icon: <SiStripe className="text-blue-600 w-6 h-6" />,
@@ -105,12 +101,36 @@ const skills = [
     name: "GitHub",
   },
   {
+    icon: <SiGithubactions className="w-6 h-6 text-black dark:text-white" />,
+    name: "CI/CD",
+  },
+  {
     icon: <FaDocker className="w-6 h-6 text-blue-600" />,
-    name: "Docket",
+    name: "Docker",
   },
   {
     icon: <SiPostman className="w-6 h-6 text-orange-600" />,
     name: "Postman",
+  },
+  {
+    icon: <SiJest className="w-6 h-6 text-pink-600" />,
+    name: "Jest",
+  },
+  {
+    icon: <FaHtml5 className="text-orange-500 w-6 h-6" />,
+    name: "HTML5",
+  },
+  {
+    icon: <FaCss3Alt className="text-blue-500 w-6 h-6" />,
+    name: "CSS3",
+  },
+  {
+    icon: <SiTailwindcss className="text-cyan-500 w-6 h-6" />,
+    name: "Tailwind",
+  },
+  {
+    icon: <SiBootstrap className="text-purple-500 w-6 h-6" />,
+    name: "Bootstrap",
   },
 ];
 
