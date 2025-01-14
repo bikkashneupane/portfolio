@@ -44,7 +44,7 @@ const About = () => {
               </h3>
               <p>Sydney, Australia</p>
             </div>
-            <div className="mt-3 w-full border dark:border-gray-700 border-gray-300 py-4 rounded-md flex justify-between px-5 items-center font-semibold text-teal-600 dark:text-teal-500">
+            {/* <div className="mt-3 w-full border dark:border-gray-700 border-gray-300 py-4 rounded-md flex justify-between px-5 items-center font-semibold text-teal-600 dark:text-teal-500">
               <div className="flex flex-col lg:flex-row lg:gap-1 items-center">
                 <span className="text-yellow-500">IT</span>
                 <span>Graduate</span>
@@ -57,7 +57,7 @@ const About = () => {
                 <span className="text-yellow-500">10+</span>
                 <span>Projects</span>
               </div>
-            </div>
+            </div> */}
           </div>
           <motion.div
             ref={ref}

@@ -1,6 +1,4 @@
 import { FaEnvelope, FaGithub, FaLinkedin, FaPhoneAlt } from "react-icons/fa";
-import { motion } from "framer-motion";
-import useAnimation from "../hooks/useAnimation";
 
 const contact = [
   {
@@ -27,8 +25,6 @@ const contact = [
 ];
 
 const Contact = () => {
-  const { ref, hasAnimated } = useAnimation();
-
   return (
     <section id="contact" className="mt-16 text-sm">
       <div className="mx-auto max-w-5xl flex flex-col dark:border-t dark:border-t-gray-800 py-10">
@@ -41,22 +37,7 @@ const Contact = () => {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-6 pb-8 px-5 rounded-lg self-center dark:text-white">
             {contact.map(({ icon, link, phone, mail, name }, index) => (
-              <motion.a
-                ref={ref}
-                initial={{ opacity: 0, scale: 0 }}
-                animate={
-                  hasAnimated
-                    ? {
-                        opacity: 1,
-                        scale: 1,
-                      }
-                    : {}
-                }
-                transition={{
-                  duration: 1,
-                  ease: "easeInOut",
-                  type: "tween",
-                }}
+              <div
                 key={index}
                 href={phone ? `tel:${phone}` : mail ? `mailto:${link}` : link}
                 target="_blank"
@@ -64,7 +45,7 @@ const Contact = () => {
               >
                 {icon}
                 <span>{name}</span>
-              </motion.a>
+              </div>
             ))}
           </div>
         </div>
