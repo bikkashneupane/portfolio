@@ -26,8 +26,6 @@ import { RiNextjsFill } from "react-icons/ri";
 import { SiPostman } from "react-icons/si";
 
 const techSkills = [
-  "HTML5",
-  "CSS3",
   "JavaScript",
   "TypeScript",
   "Java",
@@ -37,14 +35,20 @@ const techSkills = [
   "Node.js",
   "Express.js",
   "MongoDB",
-  "Mongoose",
+  "PostgreSQL",
   "MySQL",
-  "Tailwind CSS",
-  "Bootstrap",
-  "Docker",
   "Stripe Payment",
   "Git",
   "GitHub",
+  "CI/CD (GitHub Actions)",
+  "Docker",
+  "Docker Compose",
+  "Postman",
+  "Jest",
+  "HTML5",
+  "CSS3",
+  "Tailwind CSS",
+  "Bootstrap",
 ];
 
 const skills = [
@@ -58,7 +62,7 @@ const skills = [
   },
   {
     icon: <FaReact className="text-blue-400 w-6 h-6" />,
-    name: "React",
+    name: "React.js",
   },
   {
     icon: <SiRedux className="text-purple-400 w-6 h-6" />,

@@ -26,7 +26,6 @@ const Hero = () => {
           <h1 className="text-2xl tracking-wider font-bold mb-2">
             Hi, I'm Bikash Neupane
           </h1>
-
           <TextAnimation />
         </div>
 
@@ -36,7 +35,11 @@ const Hero = () => {
           transition={{ type: "tween", duration: 2, ease: "easeInOut" }}
           className="flex flex-col items-center gap-2"
         >
-          <a href="https://drive.google.com/file/d/1e60rYZtRSQA10JqU2xvrvwohyEMKysX6/view?usp=sharing">
+          <a
+            href="https://drive.google.com/file/d/1e60rYZtRSQA10JqU2xvrvwohyEMKysX6/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <button className="flex items-center mt-10 px-10 py-4 text-gray-100 bg-teal-800 rounded-lg shadow-lg font-semibold hover:bg-teal-600">
               <span>Download My CV</span>
               <svg
@@ -73,6 +76,21 @@ const Hero = () => {
           </div>
         </motion.div>
       </motion.div>
+
+      <div className="absolute bottom-6 w-full flex justify-center items-center">
+        <span className="text-gray-300 text-sm">Scroll down to explore</span>
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{
+            duration: 1.5,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="ml-2 text-gray-300"
+        >
+          ↓
+        </motion.div>
+      </div>
     </div>
   );
 };

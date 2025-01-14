@@ -44,7 +44,7 @@ const Experience = () => {
           </div>
         </div>
 
-        <div className="mt-8 space-y-2">
+        <div className="mt-12 space-y-2">
           <div className="flex gap-2 items-center">
             <img
               src={freelancelogo}
