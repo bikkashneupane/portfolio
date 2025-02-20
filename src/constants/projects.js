@@ -4,8 +4,25 @@ import netflixgpt from "../assets/netflix_gpt.png";
 import vikiasmy_watch from "../assets/vikiasmy.png";
 import vikiamy_admin_cms from "../assets/Vikiasmy_Admin_CMS.png";
 import github_bikash from "../assets/github_bikash.mov";
+import microservices from "../assets/microservices.png";
 
 export const projects = [
+  {
+    name: "Microservices Project: Node.js CI/CD and Tests",
+    thumbnail: microservices,
+    description:
+      "A Node.js-based microservices architecture with API Gateway, Book Service, Chat Service, and User Service. Features CI/CD pipelines, Jest tests, and Redis integration.",
+    tech: [
+      "Node.js",
+      "Express",
+      "TypeScript",
+      "MongoDB",
+      "Redis",
+      "Jest",
+      "CI/CD (GitHub Actions)",
+    ],
+    github: "https://github.com/bikkashneupane/Node-AI-CI-CD-Tests",
+  },
   {
     name: "React E-Commerce Full Stack",
     thumbnail: vikiasmy_watch,

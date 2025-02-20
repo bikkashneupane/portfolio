@@ -1,42 +1,49 @@
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Hero from "./components/Hero";
-import Navigation from "./components/Navigation";
-import Projects from "./components/Projects";
-import Skills from "./components/Skills";
-import Footer from "./components/Footer";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Hero from "./pages/Hero";
+import Navigation from "./pages/Navigation";
+import Projects from "./pages/Projects";
+import Skills from "./pages/Skills";
+import Footer from "./pages/Footer";
 import "./App.css";
 import ParticlesBg from "./components/ParticlesBg";
 import DarkMode from "./components/DarkMode";
-import { useEffect, useState } from "react";
-import Experience from "./components/Experience";
+import Experience from "./pages/Experience";
+import useDark from "./hooks/useDark";
+import { motion, useScroll } from "motion/react";
 
 function App() {
-  const [isDark, setIsDark] = useState(true);
+  const { isDark, toggleDarkMode } = useDark();
+  const { scrollYProgress } = useScroll();
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const root = window.document.documentElement;
-      root.classList.toggle("dark", isDark); // Toggles based on isDark value
-    }
-  }, [isDark]);
-
-  const toggleDarkMode = () => {
-    setIsDark(!isDark);
-  };
   return (
     <>
-      <Navigation />
-      {/* {!isDark && <ParticlesBg />} */}
-      <ParticlesBg />
-      <Hero />
-      <About />
-      <Experience />
-      <Skills />
-      <Projects />
-      <Contact />
-      <Footer />
-      <DarkMode isDark={isDark} toggleDarkMode={toggleDarkMode} />
+      <motion.div
+        id="scroll-indicator"
+        style={{
+          scaleX: scrollYProgress,
+          position: "fixed",
+          top: "0px",
+          left: "0",
+          right: "0",
+          height: "3px",
+          originX: "0",
+          backgroundColor: "#9C27B0",
+          zIndex: "1000",
+        }}
+      />
+      <>
+        <Navigation />
+        <ParticlesBg />
+        <Hero />
+        <About />
+        <Experience />
+        <Skills />
+        <Projects />
+        <Contact />
+        <Footer />
+        <DarkMode isDark={isDark} toggleDarkMode={toggleDarkMode} />
+      </>
     </>
   );
 }

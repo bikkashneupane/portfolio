@@ -41,7 +41,7 @@ const Contact = () => {
                 key={index}
                 href={phone ? `tel:${phone}` : mail ? `mailto:${link}` : link}
                 target="_blank"
-                className="flex lg:flex-col items-center gap-4 md:gap-2 border border-gray-300 dark:border-gray-700 py-3 px-4 rounded-md hover:bg-teal-500 hover:text-white transition-all delay-75 duration-300 ease-in-out"
+                className="flex lg:flex-col items-center gap-4 md:gap-2 border border-gray-300 dark:border-gray-700 py-3 px-4 rounded-md hover:bg-teal-500 hover:text-white transition-all delay-75 duration-300 ease-in-out cursor-pointer"
               >
                 {icon}
                 <span>{name}</span>

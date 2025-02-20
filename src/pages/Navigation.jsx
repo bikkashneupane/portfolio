@@ -1,18 +1,50 @@
-import { useState } from "react";
-import { FaHome, FaUser, FaEnvelope, FaProjectDiagram } from "react-icons/fa";
+import { useState, useEffect } from "react";
+import {
+  FaHome,
+  FaUser,
+  FaEnvelope,
+  FaProjectDiagram,
+  FaTasks,
+} from "react-icons/fa";
 import { GiGiftOfKnowledge } from "react-icons/gi";
 import { motion } from "framer-motion";
 
 const navItems = [
   { icon: <FaHome />, name: "Home", to: "#hero" },
   { icon: <FaUser />, name: "About", to: "#about" },
-  { icon: <FaProjectDiagram />, name: "Projects", to: "#projects" },
+  { icon: <FaTasks />, name: "Experience", to: "#experience" },
   { icon: <GiGiftOfKnowledge />, name: "Skills", to: "#skills" },
+  { icon: <FaProjectDiagram />, name: "Projects", to: "#projects" },
   { icon: <FaEnvelope />, name: "Contact", to: "#contact" },
 ];
 
 const Navigation = () => {
   const [mobileView, setMobileView] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
+
+  useEffect(() => {
+    const handleIntersection = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, {
+      root: null,
+      threshold: 0.6, // Adjust the threshold for when a section becomes "active"
+    });
+
+    navItems.forEach((item) => {
+      const section = document.querySelector(item.to);
+      if (section) observer.observe(section);
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   const handleClick = (e, to) => {
     e.preventDefault();
@@ -23,13 +55,12 @@ const Navigation = () => {
         block: "start",
       });
     }
-    setMobileView(false); // Close the mobile view after clicking
+    setMobileView(false);
   };
 
   return (
     <nav className="z-50">
       {/* Desktop Navigation */}
-
       <motion.div
         initial={{ y: "-100%" }}
         animate={{ y: 0 }}
@@ -37,26 +68,27 @@ const Navigation = () => {
         className="fixed top-0 left-0 right-0 bg-gray-950 text-white z-50"
       >
         <div className="flex justify-between items-center p-4 mx-auto max-w-[1440px] h-[80px]">
-          <a href="#" className="font-bold text-xl md:text-2xl tracking-wider">
-            <span className="text-white">BIK</span>
-            <span className="text-teal-600">ASH</span>
+          <a href="#" className="font-bold text-xl tracking-wider">
+            <span className="text-teal-600">Bikash</span>{" "}
+            <span className="text-white">Neupane</span>
           </a>
-
           <div className="hidden md:flex md:justify-between items-center md:space-x-10 font-semibold">
             {navItems.map((item, index) => (
               <a
                 href={item.to}
                 key={index}
-                className="group flex items-center transform transition hover:text-teal-500"
+                className={`group flex items-center transform transition hover:text-teal-500 ${
+                  activeSection === item.to.substring(1) ? "text-teal-500" : ""
+                }`}
                 onClick={(e) => handleClick(e, item.to)}
               >
                 <div className="flex flex-col items-center gap-1">
-                  {/* <span>{item.icon}</span> */}
                   <span>{item.name}</span>
                 </div>
               </a>
             ))}
           </div>
+
           <div
             className="md:hidden text-teal-500"
             onClick={() => setMobileView(!mobileView)}

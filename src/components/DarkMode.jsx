@@ -5,7 +5,7 @@ const DarkMode = ({ isDark, toggleDarkMode }) => {
   return (
     <div className="fixed bottom-5 right-5 z-50">
       <button
-        className="bg-black dark:bg-white text-white dark:text-black p-2 rounded-full outline-none transition-all ease-in-out"
+        className="bg-gray-50 dark:bg-gray-800 text-black dark:text-white p-2 rounded-full outline-none transition-all ease-in-out"
         onClick={toggleDarkMode}
       >
         {isDark ? (
